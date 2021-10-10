@@ -6,8 +6,9 @@ public class Grid {
 
 	private int num_rows = 5;
 	private int num_cols = 5;
+	private String playerOwnerId;
 
-	public Grid() {
+	public Grid(String playerOwnerId) {
 		this(5, 5);
 	}
 	
