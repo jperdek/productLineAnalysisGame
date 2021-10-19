@@ -64,7 +64,6 @@ public class Player {
 		}
 
 		return counter;
-
 	}
 
 	public void chooseShipLocation(Ship s, int row, int col, int direction) {

@@ -28,6 +28,4 @@ public aspect PlayerName {
 		return createdPlayer;
 	}
 	
-	
-
 }

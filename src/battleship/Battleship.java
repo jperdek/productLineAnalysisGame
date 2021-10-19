@@ -9,7 +9,8 @@ public class Battleship {
 	
 	
 	public Battleship() {
-		System.out.println("JAVA BATTLESHIP - ** Yuval Marcus ** and remake by Jakub Perdek");
+		printAbout();
+		
 		boardManager = new BoardManager();
 		boardManager.registerPlayerComputer("PLAYER", new Board(), "COMPUTER", new Board());
 		
@@ -27,9 +28,8 @@ public class Battleship {
 
 		String result = "";
 		while (true) {
-			System.out.println(result);
-			System.out.println("\nUSER MAKE GUESS:");
-			System.out.println("SHOULD BE CALLED");
+			System.out.println("\n--------------------------------------------------------------------");
+			System.out.println("\nUSER MAKING GUESS...");
 			result = askForGuess(userPlayer, computer);
 
 			if (userPlayer.hasLost()) {
@@ -40,6 +40,7 @@ public class Battleship {
 				break;
 			}
 
+			System.out.println("\n--------------------------------------------------------------------");
 			System.out.println("\nCOMPUTER IS MAKING GUESS...");
 
 			compMakeGuess(computer, userPlayer);
@@ -82,6 +83,10 @@ public class Battleship {
 		reader.nextLine();
 	}
 
+	private static void printAbout() {
+		System.out.println("JAVA BATTLESHIP - ** Yuval Marcus ** and remake by Jakub Perdek");
+	}
+	
 	private static String askForGuess(Player p, Player opp) {
 		System.out.println("Viewing My Guesses:");
 		p.printOpponentGridStatus();
