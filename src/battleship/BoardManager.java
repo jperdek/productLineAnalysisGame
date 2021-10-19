@@ -13,10 +13,10 @@ public class BoardManager {
 		boards = new  HashMap<String, Board>();
 	}
 	
-	public void registerPlayerComputer(String playerId, Board playerBoard, 
+	public void registerPlayerComputer(String boardId, Board playerBoard, 
 			String computerId, Board computerBoard) {
 		this.registerBoard(computerId, computerBoard);
-		this.registerBoard(playerId, playerBoard);
+		this.registerBoard(boardId, playerBoard);
 	}
 	
 	public void registerBoard(String boardId, Board board) {

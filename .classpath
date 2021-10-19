@@ -7,5 +7,6 @@
 	</classpathentry>
 	<classpathentry excluding="battleship/LoggerBattleship.aj" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.ajdt.core.ASPECTJRT_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Java-Battleship/libraries/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

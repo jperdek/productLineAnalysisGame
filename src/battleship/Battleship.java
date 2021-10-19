@@ -2,6 +2,8 @@ package battleship;
 
 import java.util.Scanner;
 
+import configurationManagement.ConfigurationLoader;
+
 public class Battleship {
 	public static Scanner reader = InputReader.getReader();
 	public BoardManager boardManager = new BoardManager();
@@ -17,14 +19,16 @@ public class Battleship {
 		
 		
 		System.out.println("\nPlayer SETUP:");
-		userPlayer = new Player("PLAYER", boardManager);
+		userPlayer = this.instantiatePlayer("PLAYER", boardManager);
 
 		System.out.println("Computer SETUP...DONE...PRESS ENTER TO CONTINUE...");
 		reader.nextLine();
 		reader.nextLine();
-		int[] player_ships = {2};
-		//computer = new Player("COMPUTER", player_ships, boardManager);
-		computer = this.instantiateOpponent("PLAYER2", player_ships, boardManager);
+		
+		//int[] playerShips = {2};
+		//computer = this.instantiateOpponent("PLAYER2", playerShips, boardManager);
+		computer = this.instantiateOpponent("PLAYER2", boardManager);
+		
 		System.out.println("\nCOMPUTER GRID (FOR DEBUG)...");
 		computer.printShips();
 
@@ -38,8 +42,6 @@ public class Battleship {
 			System.out.println("\n--------------------------------------------------------------------");
 			System.out.println("\n OPPONENT IS MAKING GUESS...");
 
-			//compMakeGuess(computer, userPlayer);
-			//askForGuess(computer, userPlayer);
 			opponentTurn(computer, userPlayer);
 			
 			if (checkFinalState(userPlayer, computer)) { break; }
@@ -64,11 +66,19 @@ public class Battleship {
 	public AbstractPlayer instantiateOpponent(String opponentID, int[] playerShips, BoardManager boardManager) {
 		return new Player(opponentID, playerShips, boardManager);
 	}
-	
-	public static void main(String[] args) {
-		Battleship battleshipGame = new Battleship();
-	}
 
+	public AbstractPlayer instantiateOpponent(String opponentID, BoardManager boardManager) {
+		return new Player(opponentID, boardManager);
+	}
+	
+	public AbstractPlayer instantiatePlayer(String playerID, int[] playerShips, BoardManager boardManager) {
+		return new Player(playerID, playerShips, boardManager);
+	}
+	
+	public AbstractPlayer instantiatePlayer(String playerID, BoardManager boardManager) {
+		return new Player(playerID, boardManager);
+	}
+	
 	//needs to be public
 	public static void compMakeGuess(AbstractPlayer comp, AbstractPlayer user) {
 		int maxRowRestriction = comp.getPlayerBoard().getAreaRowsWidth() - 1;
@@ -146,5 +156,10 @@ public class Battleship {
 			return "** USER MISS AT " + oldRow + oldCol + " **";
 		}
 	}
-
+	
+	
+	public static void main(String[] args) {
+		ConfigurationLoader configurationLoader = new ConfigurationLoader("resources/battleshipConfig.json");
+		Battleship battleshipGame = new Battleship();
+	}
 }

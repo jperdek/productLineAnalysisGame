@@ -3,8 +3,8 @@ package battleship;
 public abstract class AbstractPlayer {
 	protected static int[] SHIP_DEFAULT_LENGTH = { 5};
 	// These are the lengths of all of the ships.
-	protected int[] ship_lengths = { 2 }; // { 2, 3, 3, 4, 5 };
-	protected int num_of_ships = 1; // 5
+	protected int[] shipLengths = { 2 }; // { 2, 3, 3, 4, 5 };
+	protected int numOfShips = 1; // 5
 	protected String id;
 	protected Board board;
 	
@@ -17,22 +17,22 @@ public abstract class AbstractPlayer {
 		this(id, Player.SHIP_DEFAULT_LENGTH, boardManager);
 	}
 	
-	public AbstractPlayer(String id, int[] ship_lengths, BoardManager boardManager) {
+	public AbstractPlayer(String id, int[] shipLengths, BoardManager boardManager) {
 		this.id = id;
 		this.board = boardManager.getBoard(this.id);
 		System.out.println(this.id);
 		System.out.println(this.board);
 		Board oponentsBoard = boardManager.getOppositeBoards(this.id).get(0);
 		
-		this.ship_lengths = ship_lengths;
-		this.num_of_ships = this.ship_lengths.length;
+		this.shipLengths = shipLengths;
+		this.numOfShips = this.shipLengths.length;
 		
 		int costOfWholeShips = 0;
-		ships = new Ship[this.num_of_ships];
-		for (int i = 0; i < this.num_of_ships; i++) {
-			Ship tempShip = new Ship(this.ship_lengths[i]);
+		ships = new Ship[this.numOfShips];
+		for (int i = 0; i < this.numOfShips; i++) {
+			Ship tempShip = new Ship(this.shipLengths[i]);
 			ships[i] = tempShip;
-			costOfWholeShips = costOfWholeShips + this.ship_lengths[i];
+			costOfWholeShips = costOfWholeShips + this.shipLengths[i];
 		}
 
 		playerGrid = new Grid(board.getAreaRowsWidth(), board.getAreaColsHeight(), costOfWholeShips);
@@ -54,7 +54,7 @@ public abstract class AbstractPlayer {
 	}
 
 	public int numOfShipsLeft() {
-		int counter = this.num_of_ships;
+		int counter = this.numOfShips;
 		for (Ship s : ships) {
 			if (s.isLocationSet() && s.isDirectionSet())
 				counter--;

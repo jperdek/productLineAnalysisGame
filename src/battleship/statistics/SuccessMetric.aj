@@ -8,14 +8,8 @@ public aspect SuccessMetric {
 	
 	public pointcut playerMove(Player processedPlayer, Player otherPlayer): 
 		call(* *.*Guess(Player, Player)) && args(processedPlayer, otherPlayer);
-	//public pointcut playerScore(): call(* );
 	
 	public pointcut hasShipPointcut(Player player): call(boolean battleship.Grid.hasShip(..)) && this(player);
-	public pointcut hasShipPointcut1(Grid player): call(boolean battleship.Grid.hasShip(..)) && target(player);
-	
-	before(Grid player): hasShipPointcut1(player) {	
-		System.out.println("PONTCUT 2!!!");
-	}
 	
 	boolean around(Player processedPlayer): hasShipPointcut(processedPlayer) {
 		String playerId = processedPlayer.getId() + StatisticVariableNames.HITS;

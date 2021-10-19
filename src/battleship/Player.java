@@ -4,14 +4,12 @@ import java.util.Scanner;
 
 public class Player extends AbstractPlayer{
 
-	
-	
 	public Player(String id, BoardManager boardManager) {
 		super(id, AbstractPlayer.SHIP_DEFAULT_LENGTH, boardManager);
 	}
 	
-	public Player(String id, int[] ship_lengths, BoardManager boardManager) {
-		super(id, ship_lengths, boardManager);
+	public Player(String id, int[] shipLengths, BoardManager boardManager) {
+		super(id, shipLengths, boardManager);
 		this.setup();
 	}
 	
