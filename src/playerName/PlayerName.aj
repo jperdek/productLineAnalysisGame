@@ -1,17 +1,19 @@
 package playerName;
 import java.util.Scanner;
 
+import battleship.AbstractPlayer;
+import battleship.ComputerPlayer;
 import battleship.InputReader;
 import battleship.Player;
 
 public aspect PlayerName {
-	private String Player.name;
+	private String AbstractPlayer.name;
 	
-	private void Player.setName(String playerName) {
+	private void AbstractPlayer.setName(String playerName) {
 		this.name = playerName;
 	}
 	
-	private String Player.getName() {
+	private String AbstractPlayer.getName() {
 		return this.name;
 	}
 	
@@ -27,5 +29,17 @@ public aspect PlayerName {
 		
 		return createdPlayer;
 	}
-	
+
+	ComputerPlayer around(): call(ComputerPlayer.new(..)){
+		Scanner reader = InputReader.getReader();
+		System.out.println("Set computer name:");
+		String playerNameLine = reader.nextLine().replace("\n", "");
+		
+		ComputerPlayer createdComputerPlayer = proceed();
+		createdComputerPlayer.setName(playerNameLine);
+		
+		System.out.println(createdComputerPlayer.getName());
+		
+		return createdComputerPlayer;
+	}
 }

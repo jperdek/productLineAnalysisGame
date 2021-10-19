@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Battleship {
 	public static Scanner reader = InputReader.getReader();
 	public BoardManager boardManager = new BoardManager();
-	public Player userPlayer, computer;
+	public AbstractPlayer userPlayer, computer;
 	
 	
 	public Battleship() {
@@ -24,45 +24,53 @@ public class Battleship {
 		reader.nextLine();
 		int[] player_ships = {2};
 		//computer = new Player("COMPUTER", player_ships, boardManager);
-		computer = new Player("PLAYER2", player_ships, boardManager);
+		computer = this.instantiateOpponent("PLAYER2", player_ships, boardManager);
 		System.out.println("\nCOMPUTER GRID (FOR DEBUG)...");
 		computer.printShips();
 
-		String result = "";
 		while (true) {
 			System.out.println("\n--------------------------------------------------------------------");
 			System.out.println("\nUSER MAKING GUESS...");
-			result = askForGuess(userPlayer, computer);
+			askForGuess(userPlayer, computer);
 
-			if (userPlayer.hasLost()) {
-				System.out.println("COMP HIT!...USER LOSES");
-				break;
-			} else if (computer.hasLost()) {
-				System.out.println("HIT!...COMPUTER LOSES");
-				break;
-			}
+			if (checkFinalState(userPlayer, computer)) { break; }
 
 			System.out.println("\n--------------------------------------------------------------------");
-			System.out.println("\nCOMPUTER IS MAKING GUESS...");
+			System.out.println("\n OPPONENT IS MAKING GUESS...");
 
 			//compMakeGuess(computer, userPlayer);
-			result = askForGuess(computer, userPlayer);
+			//askForGuess(computer, userPlayer);
+			opponentTurn(computer, userPlayer);
 			
-			if (userPlayer.hasLost()) {
-				System.out.println("COMP HIT!...USER LOSES");
-				break;
-			} else if (computer.hasLost()) {
-				System.out.println("HIT!...COMPUTER LOSES");
-				break;
-			}
+			if (checkFinalState(userPlayer, computer)) { break; }
 		}
+	}
+	
+	private void opponentTurn(AbstractPlayer computer, AbstractPlayer userPlayer) {
+		askForGuess(computer, userPlayer);
+	}
+	
+	private boolean checkFinalState(AbstractPlayer userPlayer, AbstractPlayer computer) {
+		if (userPlayer.hasLost()) {
+			System.out.println("COMP HIT!...USER LOSES");
+			return true;
+		} else if (computer.hasLost()) {
+			System.out.println("HIT!...COMPUTER LOSES");
+			return true;
+		}
+		return false;
+	}
+	
+	public AbstractPlayer instantiateOpponent(String opponentID, int[] playerShips, BoardManager boardManager) {
+		return new Player(opponentID, playerShips, boardManager);
 	}
 	
 	public static void main(String[] args) {
 		Battleship battleshipGame = new Battleship();
 	}
 
-	private static void compMakeGuess(Player comp, Player user) {
+	//needs to be public
+	public static void compMakeGuess(AbstractPlayer comp, AbstractPlayer user) {
 		int maxRowRestriction = comp.getPlayerBoard().getAreaRowsWidth() - 1;
 		int maxColRestriction = comp.getPlayerBoard().getAreaColsHeight() - 1;
 		
@@ -98,7 +106,7 @@ public class Battleship {
 		System.out.println("JAVA BATTLESHIP - ** Yuval Marcus ** and remake by Jakub Perdek");
 	}
 	
-	private static String askForGuess(Player p, Player opp) {
+	private static String askForGuess(AbstractPlayer p, AbstractPlayer opp) {
 		System.out.println("Viewing My Guesses:");
 		p.printOpponentGridStatus();
 		int maxColRestriction = p.getPlayerBoard().getAreaColsHeight() - 1;
