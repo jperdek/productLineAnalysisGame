@@ -27,14 +27,16 @@ public class Player {
 		this.ship_lengths = ship_lengths;
 		this.num_of_ships = this.ship_lengths.length;
 		
+		int costOfWholeShips = 0;
 		ships = new Ship[this.num_of_ships];
 		for (int i = 0; i < this.num_of_ships; i++) {
 			Ship tempShip = new Ship(this.ship_lengths[i]);
 			ships[i] = tempShip;
+			costOfWholeShips = costOfWholeShips + this.ship_lengths[i];
 		}
 
-		playerGrid = new Grid(board.getAreaRowsWidth(), board.getAreaColsHeight());
-		oppGrid = new Grid(oponentsBoard.getAreaRowsWidth(), oponentsBoard.getAreaColsHeight());
+		playerGrid = new Grid(board.getAreaRowsWidth(), board.getAreaColsHeight(), costOfWholeShips);
+		oppGrid = new Grid(oponentsBoard.getAreaRowsWidth(), oponentsBoard.getAreaColsHeight(), -1);
 		if(this.id != "COMPUTER") {
 			this.setup();
 		} else {

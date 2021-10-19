@@ -12,7 +12,8 @@ public class Battleship {
 		printAbout();
 		
 		boardManager = new BoardManager();
-		boardManager.registerPlayerComputer("PLAYER", new Board(), "COMPUTER", new Board());
+		//boardManager.registerPlayerComputer("PLAYER", new Board(), "COMPUTER", new Board());
+		boardManager.registerPlayerComputer("PLAYER", new Board(), "PLAYER2", new Board());
 		
 		
 		System.out.println("\nPlayer SETUP:");
@@ -22,7 +23,8 @@ public class Battleship {
 		reader.nextLine();
 		reader.nextLine();
 		int[] player_ships = {2};
-		computer = new Player("COMPUTER", player_ships, boardManager);
+		//computer = new Player("COMPUTER", player_ships, boardManager);
+		computer = new Player("PLAYER2", player_ships, boardManager);
 		System.out.println("\nCOMPUTER GRID (FOR DEBUG)...");
 		computer.printShips();
 
@@ -43,7 +45,16 @@ public class Battleship {
 			System.out.println("\n--------------------------------------------------------------------");
 			System.out.println("\nCOMPUTER IS MAKING GUESS...");
 
-			compMakeGuess(computer, userPlayer);
+			//compMakeGuess(computer, userPlayer);
+			result = askForGuess(computer, userPlayer);
+			
+			if (userPlayer.hasLost()) {
+				System.out.println("COMP HIT!...USER LOSES");
+				break;
+			} else if (computer.hasLost()) {
+				System.out.println("HIT!...COMPUTER LOSES");
+				break;
+			}
 		}
 	}
 	
@@ -119,7 +130,7 @@ public class Battleship {
 
 		if (opp.hasShipOnGrid(row, col)) {
 			p.markHitOpponent(row, col);
-			opp.markMissPlayer(row, col);
+			opp.markHitPlayer(row, col);
 			return "** USER HIT AT " + oldRow + oldCol + " **";
 		} else {
 			p.markMissOpponent(row, col);

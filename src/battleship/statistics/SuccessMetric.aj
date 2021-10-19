@@ -41,11 +41,14 @@ public aspect SuccessMetric {
 		String movesId = processedPlayer.getId() + StatisticVariableNames.MOVES;
 		IntegerObject movesCount = (IntegerObject) statisticManager.getVariable(movesId);
 		IntegerObject hitsCount = (IntegerObject) statisticManager.getVariable(hitsId);
-		if(movesCount != null) {
+		if(hitsCount == null && movesCount != null) {
 			return movesCount.getValue();
 		}
 		if (hitsCount == null) {
 			System.out.println("Unknown values - values has not been inserted yet!");
+			return 0;
+		}
+		if(movesCount == null) {
 			return 0;
 		}
 		return movesCount.getValue() - hitsCount.getValue();

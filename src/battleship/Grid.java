@@ -2,21 +2,22 @@ package battleship;
 
 public class Grid {
 	private Location[][] grid;
-	private int points;
+	private int points = 0;
 
-	private int num_rows = 5;
-	private int num_cols = 5;
-	private String playerOwnerId;
+	private int numRows = 5;
+	private int numCols = 5;
+	private int finalPoints;
 
-	public Grid(String playerOwnerId) {
-		this(5, 5);
+	public Grid(String playerOwnerId, int finalPoints) {
+		this(5, 5, finalPoints);
 	}
 	
-	public Grid(int num_rows, int num_cols) {
-		this.num_rows = num_rows;
-		this.num_cols = num_cols;
+	public Grid(int numRows, int numCols, int finalPoints) {
+		this.numRows = numRows;
+		this.numCols = numCols;
+		this.finalPoints = finalPoints;
 		
-		grid = new Location[this.num_rows][this.num_cols];
+		grid = new Location[this.numRows][this.numCols];
 
 		for (int row = 0; row < grid.length; row++) {
 			for (int col = 0; col < grid[row].length; col++) {
@@ -30,7 +31,8 @@ public class Grid {
 	// on the Location object.
 	public void markHit(int row, int col) {
 		grid[row][col].markHit();
-		points++;
+		this.points++;
+		System.out.println("INCREASING POINTS");
 	}
 
 	// Mark a miss on this location.
@@ -70,12 +72,12 @@ public class Grid {
 
 	// Return the number of rows in the Grid
 	public int numRows() {
-		return this.num_rows;
+		return this.numRows;
 	}
 
 	// Return the number of columns in the grid
 	public int numCols() {
-		return this.num_cols;
+		return this.numCols;
 	}
 
 	public void printStatus() {
@@ -91,7 +93,12 @@ public class Grid {
 	}
 
 	public boolean hasLost() {
-		if (points >= 17)
+		if (this.finalPoints == -1) {
+			System.out.println("Error: this board is only for player view of misses and hits!");
+		}
+		System.out.println("FFFFFFFFFFFFFFFFFFFFFF: " + Integer.toString(this.finalPoints));
+		System.out.println("EEEEEEEEEEEEEEEEEEEEEE: " + Integer.toString(this.points));
+		if (points >= this.finalPoints)
 			return true;
 		else
 			return false;
@@ -131,18 +138,18 @@ public class Grid {
 		System.out.println();
 		// Print columns (HEADER)
 		System.out.print("  ");
-		for (int i = 1; i <= this.num_cols; i++) {
+		for (int i = 1; i <= this.numCols; i++) {
 			System.out.print(i + " ");
 		}
 		System.out.println();
 
 		// Print rows
-		int endLetterForLoop = (this.num_rows - 1) + 65;
+		int endLetterForLoop = (this.numRows - 1) + 65;
 		for (int i = 65; i <= endLetterForLoop; i++) {
 			char theChar = (char) i;
 			System.out.print(theChar + " ");
 
-			for (int j = 0; j < this.num_cols; j++) {
+			for (int j = 0; j < this.numCols; j++) {
 				if (type == 0) // type == 0; status
 				{
 					if (grid[switchCounterToIntegerForArray(i)][j].isUnguessed())
