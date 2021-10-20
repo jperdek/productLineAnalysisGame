@@ -2,14 +2,18 @@ package battleship.statistics;
 
 import battleship.Grid;
 import battleship.Player;
+import configurationManagement.Configuration;
 
 public aspect SuccessMetric {
 	StatisticManager statisticManager = new StatisticManager();
-	
+
 	public pointcut playerMove(Player processedPlayer, Player otherPlayer): 
-		call(* *.*Guess(Player, Player)) && args(processedPlayer, otherPlayer);
+		call(* *.*Guess(Player, Player)) && args(processedPlayer, otherPlayer)
+		&& if(Configuration.collectStatistics);
 	
-	public pointcut hasShipPointcut(Player player): call(boolean battleship.Grid.hasShip(..)) && this(player);
+	public pointcut hasShipPointcut(Player player): 
+		call(boolean battleship.Grid.hasShip(..)) && this(player) 
+		&& if(Configuration.collectStatistics);
 	
 	boolean around(Player processedPlayer): hasShipPointcut(processedPlayer) {
 		String playerId = processedPlayer.getId() + StatisticVariableNames.HITS;

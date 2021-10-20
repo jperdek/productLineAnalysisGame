@@ -5,6 +5,7 @@ import battleship.AbstractPlayer;
 import battleship.ComputerPlayer;
 import battleship.InputReader;
 import battleship.Player;
+import configurationManagement.Configuration;
 
 public aspect PlayerName {
 	private String AbstractPlayer.name;
@@ -17,7 +18,7 @@ public aspect PlayerName {
 		return this.name;
 	}
 	
-	Player around(): call(Player.new(..)){
+	Player around(): call(Player.new(..)) && if(Configuration.setNames){
 		Scanner reader = InputReader.getReader();
 		System.out.println("Set player name:");
 		String playerNameLine = reader.nextLine().replace("\n", "");
@@ -30,7 +31,7 @@ public aspect PlayerName {
 		return createdPlayer;
 	}
 
-	ComputerPlayer around(): call(ComputerPlayer.new(..)){
+	ComputerPlayer around(): call(ComputerPlayer.new(..)) && if(Configuration.setNames){
 		Scanner reader = InputReader.getReader();
 		System.out.println("Set computer name:");
 		String playerNameLine = reader.nextLine().replace("\n", "");
