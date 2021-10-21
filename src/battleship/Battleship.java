@@ -3,7 +3,9 @@ package battleship;
 import java.util.Scanner;
 
 import configurationManagement.ConfigurationLoader;
+import derivator.DerivationManager;
 
+//@{}
 public class Battleship {
 	public static Scanner reader = InputReader.getReader();
 	public BoardManager boardManager = new BoardManager();
@@ -160,6 +162,10 @@ public class Battleship {
 	
 	public static void main(String[] args) {
 		ConfigurationLoader configurationLoader = new ConfigurationLoader("resources/battleshipConfig.json");
-		Battleship battleshipGame = new Battleship();
+		DerivationManager derivationManager = new DerivationManager();
+		derivationManager.processDerivation("file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Java-Battleship/src",
+						"file:///C:/Users/perde/OneDrive/Desktop/tutorials/aspekty/output/");
+		
+		//Battleship battleshipGame = new Battleship();
 	}
 }
