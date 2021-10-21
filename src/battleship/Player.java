@@ -2,6 +2,7 @@ package battleship;
 
 import java.util.Scanner;
 
+//@{}
 public class Player extends AbstractPlayer{
 
 	public Player(String id, BoardManager boardManager) {

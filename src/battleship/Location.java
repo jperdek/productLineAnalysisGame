@@ -1,5 +1,6 @@
 package battleship;
 
+//@{}
 public class Location {
 	// Global Vars
 	public static final int UNGUESSED = 0;

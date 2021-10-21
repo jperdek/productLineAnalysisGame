@@ -28,16 +28,20 @@ public class DerivationAnnotationManager {
 				 while(bufferedReader.ready() && (startCommentChar = (char) bufferedReader.read()) != '/') {
 					 bufferedWriter.write((int) startCommentChar);
 				 }
-				
-				startCommentChar2 = (char) bufferedReader.read();
-				if(startCommentChar2 == '/') {
-					stringBuilder.append('/'); stringBuilder.append('/');
-					potentialAnnotationMark = skipWhiteSpace(bufferedReader, bufferedWriter);
-					stringBuilder.append(potentialAnnotationMark);
-					shouldRemove = this.chooseAndAnnotationMethod(bufferedReader, potentialAnnotationMark, 
-							bufferedWriter, stringBuilder);
-				} else {
-					bufferedWriter.write((int) startCommentChar2);
+				if(bufferedReader.ready()) {
+					startCommentChar2 = (char) bufferedReader.read();
+					if(startCommentChar2 == '/') {
+						stringBuilder.append('/'); stringBuilder.append('/');
+						potentialAnnotationMark = skipWhiteSpace(bufferedReader, bufferedWriter);
+						if(potentialAnnotationMark != '@' && potentialAnnotationMark != '#') {
+							bufferedWriter.write((int) '/'); bufferedWriter.write((int) '/');
+						}
+						stringBuilder.append(potentialAnnotationMark);
+						shouldRemove = this.chooseAndAnnotationMethod(bufferedReader, potentialAnnotationMark, 
+								bufferedWriter, stringBuilder);
+					} else {
+						bufferedWriter.write((int) startCommentChar2);
+					}
 				}
 			}
 		} catch(ParseException pe) {

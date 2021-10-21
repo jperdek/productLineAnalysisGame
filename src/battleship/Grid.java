@@ -1,5 +1,6 @@
 package battleship;
 
+//@{}
 public class Grid {
 	private Location[][] grid;
 	private int points = 0;

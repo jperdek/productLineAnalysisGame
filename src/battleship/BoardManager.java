@@ -6,6 +6,7 @@ import org.aspectj.internal.lang.annotation.ajcDeclareAnnotation;
 
 import java.util.HashMap;
 
+//@{}
 public class BoardManager {
 	private Map<String, Board> boards;
 	

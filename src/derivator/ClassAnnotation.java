@@ -15,7 +15,7 @@ public class ClassAnnotation extends DerivationAnnotation {
 	}
 	
 	protected boolean checkAnnotation(String stringToCheck) {
-		return stringToCheck.contains("class");
+		return stringToCheck.contains("class") || stringToCheck.contains("aspect");
 	}
 	
 	public boolean process(BufferedReader bufferedReader, BufferedWriter bufferedWriter, 

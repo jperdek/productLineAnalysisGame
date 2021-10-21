@@ -4,8 +4,8 @@ import battleship.AbstractPlayer;
 import battleship.Battleship;
 import battleship.BoardManager;
 import configurationManagement.Configuration;
-import computerOpponent.ComputerInstantiator;
 
+//@{}
 public aspect DifficultyManagement {
 	pointcut manageDifficultyDuringInstantiationOfPlayerOpponent(
 			String opponentID, int[] playerShips, BoardManager boardManager): 

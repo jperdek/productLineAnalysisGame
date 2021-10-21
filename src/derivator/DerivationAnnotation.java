@@ -17,6 +17,7 @@ public abstract class DerivationAnnotation {
 		int depth = 1;
 		char rodeChar;
 		parseToStartChar(bufferedReader, bufferedWriter, '{', stringBuilder);
+		
 		while(depth != 0 && bufferedReader.ready()) {
 			rodeChar = (char) bufferedReader.read();
 			if(rodeChar == '{') { depth++; };
@@ -27,10 +28,13 @@ public abstract class DerivationAnnotation {
 	
 	protected void parseToStartChar(BufferedReader bufferedReader, BufferedWriter bufferedWriter, 
 			char startChar, StringBuilder stringBuilder) throws IOException, IncorrectAnnotationUsageException {
-		char rodeChar;
+		char rodeChar = '{';
 		while(bufferedReader.ready() && (rodeChar = (char) bufferedReader.read()) != startChar) {
 			bufferedWriter.write((int) rodeChar);
 			stringBuilder.append((char) rodeChar);
+		}
+		if(bufferedReader.ready()) {
+			bufferedWriter.write((int) rodeChar);
 		}
 		if(checkAnnotation(stringBuilder.toString()) == false) {
 			throw new IncorrectAnnotationUsageException("This is incorrect: " + stringBuilder.toString());

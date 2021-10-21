@@ -1,5 +1,6 @@
 package battleship;
 
+//@{}
 public class Board {
 	private int areaRowsWidth = 5;
 	private int areaColsHeight = 5;

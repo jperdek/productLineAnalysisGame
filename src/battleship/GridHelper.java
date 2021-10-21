@@ -1,5 +1,6 @@
 package battleship;
 
+//@{}
 public class GridHelper {
 	public static int convertLetterToInt(String val) {
 		int toReturn = -1;

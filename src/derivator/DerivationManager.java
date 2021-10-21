@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.stream.Stream;
 
 import configurationManagement.Configuration;
+import configurationManagement.ConfigurationLoader;
 
 
 public class DerivationManager {
@@ -17,8 +18,7 @@ public class DerivationManager {
 	private FileCopy fileCopy;
 
 	public DerivationManager() {
-		this.derivationVariableProcesor = new DerivationVariableProcessor(
-				Configuration.createConfigurableVariableManager());
+		this.derivationVariableProcesor = new DerivationVariableProcessor(createConfigurableVariableManager());
 		this.derivationAnnotationManager = new DerivationAnnotationManager(this.derivationVariableProcesor);
 		this.fileCopy = new FileCopy(this.derivationAnnotationManager);
 	}
@@ -75,5 +75,24 @@ public class DerivationManager {
 		} finally {
 			s.close();
 		}
+	}
+	
+	public static ConfigurationVariableManager createConfigurableVariableManager() {
+		ConfigurationVariableManager configurationVariableManager = new ConfigurationVariableManager();
+		
+		configurationVariableManager.addVariable("setNames", Boolean.toString(Configuration.setNames));
+		configurationVariableManager.addVariable("computerOpponent", Boolean.toString(Configuration.computerOpponent));
+		configurationVariableManager.addVariable("collectStatistics", Boolean.toString(Configuration.collectStatistics));
+		configurationVariableManager.addVariable("challenge", Boolean.toString(Configuration.challenge));
+		configurationVariableManager.addVariable("difficulty", Configuration.difficulty);
+		
+		return configurationVariableManager;
+	}
+	
+	public static void main(String[] args) {
+		ConfigurationLoader configurationLoader = new ConfigurationLoader("resources/battleshipConfig.json");
+		DerivationManager derivationManager = new DerivationManager();
+		derivationManager.processDerivation("file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Java-Battleship/src",
+				"file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Generated/src/");
 	}
 }

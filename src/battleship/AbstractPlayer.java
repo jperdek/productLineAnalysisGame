@@ -1,5 +1,6 @@
 package battleship;
 
+//@{}
 public abstract class AbstractPlayer {
 	protected static int[] SHIP_DEFAULT_LENGTH = { 5};
 	// These are the lengths of all of the ships.

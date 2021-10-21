@@ -2,6 +2,7 @@ package battleship;
 
 import java.util.Scanner;
 
+//@{}
 public class InputReader {
 	public static Scanner reader = new Scanner(System.in);
 	
