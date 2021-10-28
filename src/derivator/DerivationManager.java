@@ -15,12 +15,22 @@ public class DerivationManager {
 	
 	private DerivationVariableProcessor derivationVariableProcesor;
 	private DerivationAnnotationManager derivationAnnotationManager;
+	private ConfigurationVariableManager configurationVariableManager;
 	private FileCopy fileCopy;
 
 	public DerivationManager() {
-		this.derivationVariableProcesor = new DerivationVariableProcessor(createConfigurableVariableManager());
+		this(createConfigurableVariableManager());
+	}
+	
+	public DerivationManager(ConfigurationVariableManager configurationVariableManager) {
+		this.configurationVariableManager = configurationVariableManager;
+		this.derivationVariableProcesor = new DerivationVariableProcessor(this.configurationVariableManager);
 		this.derivationAnnotationManager = new DerivationAnnotationManager(this.derivationVariableProcesor);
 		this.fileCopy = new FileCopy(this.derivationAnnotationManager);
+	}
+	
+	public ConfigurationVariableManager getConfigurationVariableManager() {
+		return this.configurationVariableManager;
 	}
 	
 	public DerivationVariableProcessor getDerivationVriableProcesor() { 

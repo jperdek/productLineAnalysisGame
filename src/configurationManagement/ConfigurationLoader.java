@@ -64,8 +64,6 @@ public class ConfigurationLoader {
 			opponentShips[i] = ((Long) array[i]).intValue();
 		}
 		Configuration.opponentShips = opponentShips;
-		System.out.println(Configuration.opponentShips.length);
-		System.out.println(Configuration.opponentShips[0]);
 	}
 	
 	private void setGlobalSettings(JSONObject configurationObject) {
