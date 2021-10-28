@@ -48,22 +48,11 @@ public class DerivationManager {
 				String newDirectoryOrFileString = actualPath.toUri().getRawPath().substring(baseLength);
 				String outputDirectoryOrFileString = outputPath + newDirectoryOrFileString;
 				if(Files.isDirectory(actualPath)) {
-					System.out.println(actualPath.getFileName());
-					System.out.println(actualPath.toUri().getRawPath().substring(baseLength));
-					
-					if (newDirectoryOrFileString == "") {
-						//continue; // to not create base output directory
-					}
-					System.out.println(">" + outputDirectoryOrFileString + "<");
 					Path outputDirectoryPath = Path.of(URI.create(outputDirectoryOrFileString));
 					Files.createDirectory(outputDirectoryPath);
-					//System.out.println(actualPath.toUri().getRawPath());
 				} else {
 					String baseInputPath = inputPath.substring(inputPath.indexOf("C:/"));
 					String baseOutputPath = outputPath.substring(inputPath.indexOf("C:/"));
-					System.out.println(baseInputPath);
-					System.out.println(baseInputPath + "/" + newDirectoryOrFileString);
-					System.out.println(baseOutputPath);
 					this.fileCopy.processFile(baseInputPath + "/" + newDirectoryOrFileString,
 							baseOutputPath + "/" + newDirectoryOrFileString);
 				}

@@ -71,7 +71,7 @@ public class DerivationAnnotationManager {
 			case '%':
 				return this.importAnnotation.process(bufferedReader, bufferedWriter, stringBuilder);
 			default:
-				System.out.println("Unknown option: " + Character.toString(potentialAnnotationMark));
+				// none annotation has been observed
 				break;
 		}
 		return true;

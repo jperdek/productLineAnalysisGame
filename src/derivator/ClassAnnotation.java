@@ -21,7 +21,7 @@ public class ClassAnnotation extends DerivationAnnotation {
 	public boolean process(BufferedReader bufferedReader, BufferedWriter bufferedWriter, 
 			StringBuilder stringBuilder) throws ParseException, IOException, IncorrectAnnotationUsageException {
 		String descriptionJSON = (String) bufferedReader.readLine();
-		System.out.println(descriptionJSON);
+
 		boolean shouldParse = this.derivationVariableProcessor.shouldProcessDerivationVariablesANDRecursive(
 				descriptionJSON);
 		if(shouldParse) {

@@ -23,7 +23,6 @@ public class FileCopy {
 	
 	public void processFile(String inputPath, String outputPath) throws IOException {
 		boolean shouldRemove = true;
-		boolean resultRemove = true;
 		FileReader fr = null;
 		BufferedReader br = null;
 		FileWriter fw = null;
