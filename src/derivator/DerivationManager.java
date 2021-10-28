@@ -78,10 +78,37 @@ public class DerivationManager {
 		return configurationVariableManager;
 	}
 	
-	public static void main(String[] args) {
+	public static void test() {
+		String newProjectName = "NewProject";
 		ConfigurationLoader configurationLoader = new ConfigurationLoader("resources/battleshipConfig.json");
 		DerivationManager derivationManager = new DerivationManager();
+		ProjectCopier.copyExistingProject("file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Java-Battleship/projectSkeleton", 
+				"file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/" + newProjectName + "/");
 		derivationManager.processDerivation("file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Java-Battleship/src",
 				"file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Generated/src/");
+	}
+	
+	public static void test1() {
+		String newProjectName = "NewProject";
+		ConfigurationLoader configurationLoader = new ConfigurationLoader("resources/battleshipConfig.json");
+		DerivationManager derivationManager = new DerivationManager();
+		DerivationManager.createSoftwareDerivation(
+				"file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Java-Battleship/",
+				"file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/", 
+				newProjectName, derivationManager);
+	}
+	
+	public static void createSoftwareDerivation(String inputPath, String outputPath, 
+			String projectName, DerivationManager derivationManager) {
+		String baseProjectSkeletonPath = inputPath + "projectSkeleton";
+		String baseProjectSrcPath = inputPath + "src";
+		String newProjectName = outputPath + projectName + "/";
+		String targetProjectSrcPath = newProjectName + "src/";
+		ProjectCopier.copyExistingProject(baseProjectSkeletonPath, newProjectName);
+		derivationManager.processDerivation(baseProjectSrcPath, targetProjectSrcPath);
+	}
+	
+	public static void main(String[] args) {
+		DerivationManager.test1();
 	}
 }
