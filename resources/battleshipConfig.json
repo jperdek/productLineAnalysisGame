@@ -73,8 +73,8 @@
         }
     },
     "chosenDifficulty": "easy",
-    "setNames": false,
-    "computerOpponent": true,
+    "setNames": true,
+    "computerOpponent": false,
     "collectStatistics": false,
     "challenge": false
 }

@@ -51,43 +51,44 @@ public class DerivationVariableProcessor {
 	}
 	
 	public boolean shouldProcessDerivationVariablesANDRecursive(JSONObject configurationObject) throws ParseException {
-        Object[] keys =  configurationObject.keySet().toArray();
-        //System.out.println((String) keys[0]);
-        System.out.println(keys.length);
+		String configValue;
+		String key_i;
+		Object[] keys =  configurationObject.keySet().toArray();
+   
         for(int i=0; i<keys.length; i++) {
-        	String configValue = (String) configurationObject.get(keys[i]);
-        	if(keys[i] != "AND" && keys[i] != "OR") {
+        	configValue = (String) configurationObject.get(keys[i]);
+        	key_i = (String) keys[i];
+        	if(!key_i.equals("AND") && !key_i.equals("OR")) {
         		String featureValue = this.configurationVariableManager.getVariable((String) keys[i]);
         	
-        		// if results not matches - whole part of AND will be false
-        		if(featureValue != configValue) {
+        		if(!featureValue.equals(configValue)) {
         			return false;
         		}	
         	}
-        	if(keys[i] == "AND") {
+        	if(key_i.equals("AND")) {
         		// if result is false - whole part of AND will be false
         		if(shouldProcessDerivationVariablesANDRecursive(configurationObject) == false) {
         			return false;
         		}
         	}
         	
-        	if(keys[i] == "OR") {
+        	if(key_i.equals("OR")) {
         		// if result is false - whole part of AND will be false
         		if(shouldProcessDerivationVariablesORRecursive(configurationObject) == false) {
         			return false;
         		}
         	}	
         }
-        System.out.println("HEre");
         // all results matched
         return true;
 	}
 	
 	public boolean shouldProcessDerivationVariablesORRecursive(JSONObject configurationObject) throws ParseException {
         String[] keys = (String[]) configurationObject.keySet().toArray();
+        String key_i;
         for(int i=0; i<keys.length; i++) {
-        	
-        	if(keys[i] != "AND" && keys[i] != "OR") {
+        	key_i = (String) keys[i];
+        	if(!key_i.equals("AND") && !key_i.equals("OR")) {
         		String featureValue = this.configurationVariableManager.getVariable(keys[i]);
         		String configValue = (String) configurationObject.get(keys[i]);
         		
@@ -96,14 +97,14 @@ public class DerivationVariableProcessor {
             		return true;
             	}
         	}
-        	if(keys[i] == "AND") {
+        	if(key_i.equals("AND")) {
         		// if result is true - whole part of OR will be true
         		if(shouldProcessDerivationVariablesANDRecursive(configurationObject)) {
         			return true;
         		}
         	}
         	
-        	if(keys[i] == "OR") {
+        	if(key_i.equals("OR")) {
         		// if result is true - whole part of OR will be true
         		if(shouldProcessDerivationVariablesORRecursive(configurationObject)) {
         			return true;

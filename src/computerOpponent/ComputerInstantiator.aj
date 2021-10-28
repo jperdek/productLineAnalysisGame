@@ -7,6 +7,7 @@ import battleship.Board;
 import battleship.AbstractPlayer;
 import battleship.Battleship;
 
+//@{"computerOpponent": "true"}
 public aspect ComputerInstantiator {
 
 	pointcut useComputerInCaseOfPlayer(

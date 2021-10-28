@@ -15,7 +15,7 @@ public class ClassAnnotation extends DerivationAnnotation {
 	}
 	
 	protected boolean checkAnnotation(String stringToCheck) {
-		return stringToCheck.contains("class") || stringToCheck.contains("aspect");
+		return stringToCheck.contains("class") || stringToCheck.contains("aspect") || stringToCheck.contains("interface");
 	}
 	
 	public boolean process(BufferedReader bufferedReader, BufferedWriter bufferedWriter, 
@@ -28,5 +28,12 @@ public class ClassAnnotation extends DerivationAnnotation {
 			this.parse(bufferedReader, bufferedWriter, stringBuilder);
 		}
 		return !shouldParse;
-	} 
+	}
+
+	@Override
+	public boolean process(BufferedReader bufferedReader, StringBuilder stringBuilder, StringBuilder content)
+			throws ParseException, IOException, IncorrectAnnotationUsageException {
+		// NOT IMPLEMENTED
+		return false;
+	}
 }

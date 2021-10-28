@@ -1,6 +1,6 @@
 package battleship;
 
-//@{}
+//@{"computerOpponent": "true"}
 public class ComputerPlayer extends AbstractPlayer{
 
 	public ComputerPlayer(String id, BoardManager boardManager) {

@@ -6,34 +6,35 @@ import java.io.IOException;
 
 import org.json.simple.parser.ParseException;
 
-public class MethodAnnotation extends DerivationAnnotation{
-	
+public class ImportAnnotation extends DerivationAnnotation  {
 	private DerivationVariableProcessor derivationVariableProcessor;
 	
-	public MethodAnnotation(DerivationVariableProcessor derivationVariableProcessor) {
+	public ImportAnnotation(DerivationVariableProcessor derivationVariableProcessor) {
 		this.derivationVariableProcessor = derivationVariableProcessor;
 	}
 	
 	protected boolean checkAnnotation(String stringToCheck) {
-		return true;
+		return stringToCheck.contains("import");
 	}
 	
-	public boolean process(BufferedReader bufferedReader, 
-			StringBuilder stringBuilder,  StringBuilder content) throws ParseException, IOException, IncorrectAnnotationUsageException {
+	public boolean process(BufferedReader bufferedReader, BufferedWriter bufferedWriter, 
+			StringBuilder stringBuilder) throws ParseException, IOException, IncorrectAnnotationUsageException {
 		String descriptionJSON = (String) bufferedReader.readLine();
 		System.out.println(descriptionJSON);
 		boolean shouldParse = this.derivationVariableProcessor.shouldProcessDerivationVariablesANDRecursive(
 				descriptionJSON);
-		// loads content all the time - if neccessary in future it will be dropped
-		this.parse(bufferedReader, stringBuilder, content);
+		
+		String importLine = (String) bufferedReader.readLine();
+		if(shouldParse) {
+			bufferedWriter.write(importLine);
+		}
 		return !shouldParse;
 	}
 
 	@Override
-	public boolean process(BufferedReader bufferedReader, BufferedWriter bufferedWriter, StringBuilder stringBuilder)
+	public boolean process(BufferedReader bufferedReader, StringBuilder stringBuilder, StringBuilder content)
 			throws ParseException, IOException, IncorrectAnnotationUsageException {
 		// NOT IMPLEMENTED
 		return false;
 	}
- 
 }

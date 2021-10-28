@@ -69,9 +69,9 @@ public class ConfigurationLoader {
 	}
 	
 	private void setGlobalSettings(JSONObject configurationObject) {
-		Configuration.setNames = (boolean) configurationObject.get("setNames");
+		Configuration.playerNames = (boolean) configurationObject.get("setNames");
 		Configuration.computerOpponent = (boolean) configurationObject.get("computerOpponent");
-		Configuration.collectStatistics = (boolean) configurationObject.get("collectStatistics");
+		Configuration.statistics = (boolean) configurationObject.get("collectStatistics");
 		Configuration.challenge = (boolean) configurationObject.get("challenge");
 	}
 }

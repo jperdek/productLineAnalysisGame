@@ -3,6 +3,7 @@ package battleship.statistics;
 import java.util.Map;
 import java.util.HashMap;
 
+//@{"statistics": "true"}
 public class StatisticManager {
 	private Map<String, VariableObject> variableAmount;
 	

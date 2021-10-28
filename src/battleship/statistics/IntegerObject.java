@@ -1,5 +1,6 @@
 package battleship.statistics;
 
+//@{"statistics": "true"}
 public class IntegerObject implements VariableObject {
 	int variable = 0;
 	

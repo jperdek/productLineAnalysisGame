@@ -2,25 +2,24 @@ package derivator;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileReader;
 import java.io.IOException;
-
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class DerivationAnnotationManager {
 
 	private ClassAnnotation classAnnotation;
 	private MethodAnnotation methodAnnotation;
+	private ImportAnnotation importAnnotation;
 	
 	public DerivationAnnotationManager(DerivationVariableProcessor derivationVariableProcessor) {
 		this.classAnnotation = new ClassAnnotation(derivationVariableProcessor);
 		this.methodAnnotation = new MethodAnnotation(derivationVariableProcessor);
+		this.importAnnotation = new ImportAnnotation(derivationVariableProcessor);
 	}
 	
 	public boolean searchForAnnotation(BufferedReader bufferedReader, BufferedWriter bufferedWriter) throws IncorrectAnnotationUsageException {
 		boolean shouldRemove = true;
+		boolean resultRemove = true;
 		StringBuilder stringBuilder = new StringBuilder();
 		try {
 			char potentialAnnotationMark, startCommentChar, startCommentChar2;
@@ -33,12 +32,15 @@ public class DerivationAnnotationManager {
 					if(startCommentChar2 == '/') {
 						stringBuilder.append('/'); stringBuilder.append('/');
 						potentialAnnotationMark = skipWhiteSpace(bufferedReader, bufferedWriter);
-						if(potentialAnnotationMark != '@' && potentialAnnotationMark != '#') {
+						if(potentialAnnotationMark != '@' && potentialAnnotationMark != '#' && potentialAnnotationMark != '%') {
 							bufferedWriter.write((int) '/'); bufferedWriter.write((int) '/');
 						}
 						stringBuilder.append(potentialAnnotationMark);
-						shouldRemove = this.chooseAndAnnotationMethod(bufferedReader, potentialAnnotationMark, 
+						resultRemove = this.chooseAndAnnotationMethod(bufferedReader, potentialAnnotationMark, 
 								bufferedWriter, stringBuilder);
+						if(resultRemove == false) {
+							shouldRemove = false;
+						}
 					} else {
 						bufferedWriter.write((int) startCommentChar2);
 					}
@@ -54,11 +56,20 @@ public class DerivationAnnotationManager {
 	
 	private boolean chooseAndAnnotationMethod(BufferedReader bufferedReader, char potentialAnnotationMark,
 			BufferedWriter bufferedWriter, StringBuilder stringBuilder) throws ParseException, IOException, IncorrectAnnotationUsageException {
+		boolean result;
 		switch(potentialAnnotationMark) {
 			case '@':
 				return this.classAnnotation.process(bufferedReader, bufferedWriter, stringBuilder);
 			case '#':
-				return this.methodAnnotation.process(bufferedReader, bufferedWriter, stringBuilder);
+				 StringBuilder content = new StringBuilder();
+				 result = this.methodAnnotation.process(bufferedReader, stringBuilder, content);
+ 
+				 if(!result) { //if content should be written - shouldParse negated in previous method
+					 bufferedWriter.append(content.toString());
+				 }
+				 return result;
+			case '%':
+				return this.importAnnotation.process(bufferedReader, bufferedWriter, stringBuilder);
 			default:
 				System.out.println("Unknown option: " + Character.toString(potentialAnnotationMark));
 				break;

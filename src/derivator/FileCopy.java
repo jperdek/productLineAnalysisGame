@@ -37,13 +37,6 @@ public class FileCopy {
 			bw = new BufferedWriter(fw);
 			
 			shouldRemove = this.derivationAnnotationManager.searchForAnnotation(br, bw);
-			while(br.ready()) {
-				resultRemove = this.derivationAnnotationManager.searchForAnnotation(br, bw);
-				
-				if(resultRemove == false) {
-					shouldRemove = false;
-				}
-			}
 		
 		} catch (IncorrectAnnotationUsageException e) {
 			e.printStackTrace();

@@ -2,6 +2,7 @@ package playerName;
 import java.util.Scanner;
 
 import battleship.AbstractPlayer;
+//%{"playerNames": "true", "computerOpponent": "true"}
 import battleship.ComputerPlayer;
 import battleship.InputReader;
 import battleship.Player;
@@ -18,7 +19,8 @@ public aspect PlayerName {
 		return this.name;
 	}
 	
-	Player around(): call(Player.new(..)) && if(Configuration.setNames){
+	//#{"playerNames": "true"}
+	Player around(): call(Player.new(..)) && if(Configuration.playerNames){
 		Scanner reader = InputReader.getReader();
 		System.out.println("Set player name:");
 		String playerNameLine = reader.nextLine().replace("\n", "");
@@ -31,7 +33,8 @@ public aspect PlayerName {
 		return createdPlayer;
 	}
 
-	ComputerPlayer around(): call(ComputerPlayer.new(..)) && if(Configuration.setNames){
+	//#{"playerNames": "true", "computerOpponent": "true"}
+	ComputerPlayer around(): call(ComputerPlayer.new(..)) && if(Configuration.playerNames){
 		Scanner reader = InputReader.getReader();
 		System.out.println("Set computer name:");
 		String playerNameLine = reader.nextLine().replace("\n", "");

@@ -79,10 +79,10 @@ public class DerivationManager {
 	
 	public static ConfigurationVariableManager createConfigurableVariableManager() {
 		ConfigurationVariableManager configurationVariableManager = new ConfigurationVariableManager();
-		
-		configurationVariableManager.addVariable("setNames", Boolean.toString(Configuration.setNames));
+
+		configurationVariableManager.addVariable("playerNames", Boolean.toString(Configuration.playerNames));
 		configurationVariableManager.addVariable("computerOpponent", Boolean.toString(Configuration.computerOpponent));
-		configurationVariableManager.addVariable("collectStatistics", Boolean.toString(Configuration.collectStatistics));
+		configurationVariableManager.addVariable("statistics", Boolean.toString(Configuration.statistics));
 		configurationVariableManager.addVariable("challenge", Boolean.toString(Configuration.challenge));
 		configurationVariableManager.addVariable("difficulty", Configuration.difficulty);
 		
