@@ -46,7 +46,7 @@ public class GeneratorManager {
 			GSample gsample[], ConfigSample configSample) {
 		ConfigurationVariableManager configurationVariableManager = new ConfigurationVariableManager();
 		for(int i = 0; i < gsample.length; i++) {
-			configurationVariableManager.addVariable(gsample[i].getVariableName(), (String) configSample.getSample(i));
+			configurationVariableManager.addVariable(gsample[i].getVariableName(), configSample.getSample(i).toString());
 		}
 		
 		return configurationVariableManager;
