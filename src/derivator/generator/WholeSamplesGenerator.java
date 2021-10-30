@@ -21,7 +21,7 @@ public class WholeSamplesGenerator {
 		return resultSamples;
 	}
 	
-	public List<ConfigSample> appendAccordingType(GSample gsample,List<ConfigSample> existingSamples) {
+	private List<ConfigSample> appendAccordingType(GSample gsample,List<ConfigSample> existingSamples) {
 		switch(gsample.getType()) {
 			case "boolean":
 				return addBooleanValues(existingSamples);
@@ -33,7 +33,7 @@ public class WholeSamplesGenerator {
 		}
 	}
 	
-	public List<ConfigSample> addBooleanValues(List<ConfigSample> existingSamples) {
+	private List<ConfigSample> addBooleanValues(List<ConfigSample> existingSamples) {
 		ConfigSample oldSample;
 		List<ConfigSample> newSamples = new ArrayList<ConfigSample>();
 		Iterator<ConfigSample> configSample = existingSamples.iterator();
@@ -59,7 +59,7 @@ public class WholeSamplesGenerator {
 		return newSamples;
 	}
 	
-	public List<ConfigSample> addStringValues(List<ConfigSample> existingSamples, String[] stringValues) {
+	private List<ConfigSample> addStringValues(List<ConfigSample> existingSamples, String[] stringValues) {
 		ConfigSample oldSample;
 		List<ConfigSample> newSamples = new ArrayList<ConfigSample>();
 		Iterator<ConfigSample> configSample = existingSamples.iterator();
