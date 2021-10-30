@@ -30,10 +30,10 @@ public class ConfigurationLoader {
 	}
 
 	private void loadAndSetDifficulty(JSONObject configurationObject) {
-		String chosenDifficultyName = (String) configurationObject.get("chosenDifficulty");
+		String chosenDifficultyName = (String) configurationObject.get("difficulty");
 		Configuration.difficulty = chosenDifficultyName;
 		
-		JSONObject difficulties =  (JSONObject) configurationObject.get("difficulty");
+		JSONObject difficulties =  (JSONObject) configurationObject.get("difficultyLevels");
 		JSONObject chosenDifficulty = (JSONObject) difficulties.get(chosenDifficultyName);
 		
 		setConfigurationForPlayer((JSONObject) chosenDifficulty.get("player"));
@@ -67,9 +67,9 @@ public class ConfigurationLoader {
 	}
 	
 	private void setGlobalSettings(JSONObject configurationObject) {
-		Configuration.playerNames = (boolean) configurationObject.get("setNames");
+		Configuration.playerNames = (boolean) configurationObject.get("playerNames");
 		Configuration.computerOpponent = (boolean) configurationObject.get("computerOpponent");
-		Configuration.statistics = (boolean) configurationObject.get("collectStatistics");
+		Configuration.statistics = (boolean) configurationObject.get("statistics");
 		Configuration.challenge = (boolean) configurationObject.get("challenge");
 	}
 }

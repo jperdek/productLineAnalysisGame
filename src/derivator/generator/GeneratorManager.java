@@ -1,5 +1,6 @@
 package derivator.generator;
 
+import derivator.ConfigFilePersistance;
 import derivator.ConfigurationVariableManager;
 import derivator.DerivationManager;
 
@@ -20,17 +21,23 @@ public class GeneratorManager {
 		generatedSamples = wholeSamplesGenerator.generateSamples(gsamples);
 	}
 	
-	public void generateProjectsFromSamples(String inputPath, String outputPath, String projectName) {
+	public void generateProjectsFromSamples(String inputPath, String outputPath, String projectName, String inputConfigPath) {
 		Iterator<ConfigSample> generatedSamples = this.generatedSamples.iterator();
 		ConfigurationVariableManager configurationVariableManagerForSample;
 		DerivationManager derivationManager;
+		ConfigFilePersistance configFilePersistance;
+		String actualProjectName;
 		int j = 1;
 		
 		while(generatedSamples.hasNext()) {
+			actualProjectName = projectName + j;
 			configurationVariableManagerForSample = GeneratorManager.createConfigurableVariableManager(
 					this.gsamples, generatedSamples.next());
 			derivationManager = new DerivationManager(configurationVariableManagerForSample);
-			DerivationManager.createSoftwareDerivation(inputPath, outputPath, projectName + j, derivationManager);
+			DerivationManager.createSoftwareDerivation(inputPath, outputPath, actualProjectName, derivationManager);
+			configFilePersistance = new ConfigFilePersistance(
+					configurationVariableManagerForSample, inputConfigPath, 
+					outputPath.replace("file:///", "") + actualProjectName + "/resources/battleshipConfig.json");
 			j++;
 		}
 	}
@@ -57,7 +64,8 @@ public class GeneratorManager {
 		GeneratorManager generatorManager = new GeneratorManager(
 				derivationManager.getConfigurationVariableManager(), "resources/variableRestrictions.json");
 		generatorManager.generateProjectsFromSamples(
-				"file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Java-Battleship/",
-				"file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/", "game");
+				"file:///C:/Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Java-Battleship/",
+				"file:///C:/Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/", "game",
+				"resources/battleshipConfig.json");
 	}
 }

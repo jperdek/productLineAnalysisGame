@@ -1,5 +1,5 @@
 {
-    "difficulty": {
+    "difficultyLevels": {
         "easy": {
             "player": {
                 "areaSize": {
@@ -72,9 +72,9 @@
             }
         }
     },
-    "chosenDifficulty": "easy",
-    "setNames": true,
+    "difficulty": "easy",
+    "playerNames": true,
     "computerOpponent": false,
-    "collectStatistics": false,
+    "statistics": false,
     "challenge": false
 }
