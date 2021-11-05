@@ -43,23 +43,19 @@ public aspect ComputerInstantiator {
 	
 	AbstractPlayer around(String opponentID, int[] playerShips, BoardManager boardManager):
 		instantiateComputerInCaseOfPlayer(opponentID, playerShips, boardManager) {
-		System.out.println("THIS WAY!!!!!!!!!!");
 		if (Configuration.computerOpponent) {
 			System.out.println("Creating computer ---------- !");
 			return new ComputerPlayer("COMPUTER", playerShips, boardManager);
 		} 
-		
 		return proceed(opponentID, playerShips, boardManager);
 	}
 	
 	AbstractPlayer around(String opponentID, BoardManager boardManager):
 		instantiateComputerInCaseOfPlayer2(opponentID, boardManager) {
-		System.out.println("WRONG WAY!!!!!!!!!!");
 		if (Configuration.computerOpponent) {
 			System.out.println("Creating computer ---------- !");
 			return new ComputerPlayer("COMPUTER", boardManager);
 		} 
-		
 		return proceed(opponentID, boardManager);
 	}
 	

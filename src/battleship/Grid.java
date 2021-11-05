@@ -33,7 +33,6 @@ public class Grid {
 	public void markHit(int row, int col) {
 		grid[row][col].markHit();
 		this.points++;
-		System.out.println("INCREASING POINTS");
 	}
 
 	// Mark a miss on this location.
@@ -97,8 +96,8 @@ public class Grid {
 		if (this.finalPoints == -1) {
 			System.out.println("Error: this board is only for player view of misses and hits!");
 		}
-		System.out.println("FFFFFFFFFFFFFFFFFFFFFF: " + Integer.toString(this.finalPoints));
-		System.out.println("EEEEEEEEEEEEEEEEEEEEEE: " + Integer.toString(this.points));
+		System.out.println("Final points: " + Integer.toString(this.finalPoints));
+		System.out.println("Points: " + Integer.toString(this.points));
 		if (points >= this.finalPoints)
 			return true;
 		else

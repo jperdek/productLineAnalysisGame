@@ -21,8 +21,6 @@ public abstract class AbstractPlayer {
 	public AbstractPlayer(String id, int[] shipLengths, BoardManager boardManager) {
 		this.id = id;
 		this.board = boardManager.getBoard(this.id);
-		System.out.println(this.id);
-		System.out.println(this.board);
 		Board oponentsBoard = boardManager.getOppositeBoards(this.id).get(0);
 		
 		this.shipLengths = shipLengths;

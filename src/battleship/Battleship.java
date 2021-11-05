@@ -15,19 +15,16 @@ public class Battleship {
 		printAbout();
 		
 		boardManager = new BoardManager();
-		//boardManager.registerPlayerComputer("PLAYER", new Board(), "COMPUTER", new Board());
 		boardManager.registerPlayerComputer("PLAYER", new Board(), "PLAYER2", new Board());
 		
 		
 		System.out.println("\nPlayer SETUP:");
 		userPlayer = this.instantiatePlayer("PLAYER", boardManager);
 
-		System.out.println("Computer SETUP...DONE...PRESS ENTER TO CONTINUE...");
+		System.out.println("OPPONENT SETUP...DONE...PRESS ENTER TO CONTINUE...");
 		reader.nextLine();
 		reader.nextLine();
 		
-		//int[] playerShips = {2};
-		//computer = this.instantiateOpponent("PLAYER2", playerShips, boardManager);
 		computer = this.instantiateOpponent("PLAYER2", boardManager);
 		
 		System.out.println("\nCOMPUTER GRID (FOR DEBUG)...");
@@ -55,10 +52,10 @@ public class Battleship {
 	
 	private boolean checkFinalState(AbstractPlayer userPlayer, AbstractPlayer computer) {
 		if (userPlayer.hasLost()) {
-			System.out.println("COMP HIT!...USER LOSES");
+			System.out.println("OPPONENT HIT!...USER LOSES");
 			return true;
 		} else if (computer.hasLost()) {
-			System.out.println("HIT!...COMPUTER LOSES");
+			System.out.println("HIT!...OPPONENT LOSES");
 			return true;
 		}
 		return false;
@@ -97,12 +94,12 @@ public class Battleship {
 		if (user.hasShipOnGrid(row, col)) {
 			comp.markHitOpponent(row, col);
 			user.markMissPlayer(row, col);
-			System.out.println("COMP HIT AT " + 
+			System.out.println("OPPONENT HIT AT " + 
 					GridHelper.convertIntToLetter(row) + GridHelper.convertCompColToRegular(col));
 		} else {
 			comp.markMissOpponent(row, col);
 			user.markMissPlayer(row, col);
-			System.out.println("COMP MISS AT " + 
+			System.out.println("OPPONENT MISS AT " + 
 					GridHelper.convertIntToLetter(row) + GridHelper.convertCompColToRegular(col));
 		}
 
@@ -128,13 +125,13 @@ public class Battleship {
 		int oldCol = -1;
 
 		while (true) {
-			System.out.print("Type in row (A-J): ");
+			System.out.print("Type in row (A-n): ");
 			String userInputRow = reader.next();
 			userInputRow = userInputRow.toUpperCase();
 			oldRow = userInputRow;
 			row = GridHelper.convertLetterToInt(userInputRow);
 
-			System.out.print("Type in column (1-10): ");
+			System.out.print("Type in column (1-n): ");
 			col = reader.nextInt();
 			oldCol = col;
 			col = GridHelper.convertUserColToProCol(col);
