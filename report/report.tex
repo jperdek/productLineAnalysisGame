@@ -28,10 +28,10 @@
 % balík listings niekedy niektoré kľúčové slová nezvýrazňuje ak to nedostane príkazom tesne pred textom
 \newcommand{\ajset}{\lstset{emph={class,aspect,new,call,execution,set,int,advice,public,thisJoinPointStaticPart,thisEnclosingJoinPointStaticPart,@annotation,dominates},emphstyle=\bfseries}}
 
-\newcommand{\reporttitle}{Aspektovo riadená konfigurácia radu softvérových výrobkov} % here goes your fancy title
+\newcommand{\reporttitle}{Aspect oriented configuration of software product line features} % here goes your fancy title
 
 \pagestyle{myheadings}
-\markboth{\reporttitle}{Kvalita refaktorovaného kódu, modulárnosť a derivovanie produktov 2021/22, FIIT STU}
+\markboth{\reporttitle}{Quality of refactored code, modularity and product derivation 2021/22, FIIT STU}
 
 \title{\reporttitle}
 
@@ -59,27 +59,15 @@ Plánujeme prispôsobi\v{t} existujúcu hru Battleship tak, aby umo\v{z}\v{n}ova
 \end{abstract}
 
 
-\section{Úvod} \label{in}
+\section{Introduction} \label{introduction}
+Creation of software products needs to create project and develop given solution according requirements. This is often expensive and needs analysis for every such project. One possible way is to implement software product line to make possible derive such resulting products or components and evolve then on basis of domain knowledge. Some features can be too expensive for customer to pay for them and because of it they are ommited. Others collide with necessary ones and needs to be ommited too. 
 
+Appropriate domain analysis is required to design mandatory and voluntary features of the given system to know which products should be possible to generate and if it brings value to customer and his changing requirements. For this purpose we used feature models. In reality many of these models can exist, but only few them can support these changing needs. We think that few relations in feature model can be expressed and solved by aspect and classes almost similarly for each group of them. But sometimes features can collide and some features can't be used together. Because of mentioned problem, its necessary to think about derivation of given product and developing certain feature without colliding ones.  
 
+In our work we try to focus on applying aspect oriented language to develop program on feature model basis to serve as software product line. During our work we analyze applying ways how to do it in AspectJ language and its consequences on code quality, encapsulation, modularity benefits and dependencies which arise with using AspectJ language. We used hints and advices from papers which provided refactoring on many systems using aspect orientated languages, especially previously mentioned AspectJ.
 
-\begin{enumerate}
+Provided software product line and our development techniques can be later applied on fractal construction. New shapes and patterns applied at given positions during recursion drawing of given fractal are voluntary features of given model. To perceive potential aesthetic feeling from some of them is necessary to derive such products. Having appropriate product line enabling generate full range of products for their next validation is the main requirement for this specific task.
 
-	\item \v{C}o najva\v{c}\v{s}í po\v{c}et vyu\v{z}ití u\v{z} prítomných rozhraní jednotlivých komponentov implementujúcich návrhový vzor Strategy a vyu\v{z}ívajúcich reflexiu (nie je v diagrame komponentov znázornené).
-
-	\item \v{C}o najmen\v{s}í po\v{c}et závislostí medzi jednotlivými komponentmi.
-
-	\item Jednoduché vyu\v{z}itie iného komponentu v rámci druhého komponentu bez nutnosti vytvára\v{t} rozhrania týchto komponentov.
-	
-	\item Zahrnú\v{t} dôle\v{z}ité technológie a vhodne ich rozdeli\v{t} do komponentov. 
-	
-	\item Oddeli\v{t} konkrétnu implementáciu hry od herného engínu ako dôkaz znovupou\v{z}ite\v{l}nosti herného engínu. 
-	
-	\item Zahrnú\v{t} dôle\v{z}ité technológie a vhodne ich rozdeli\v{t} do komponentov. 
-	
-	\item Navrhnú\v{t} komponent prepájajúci podstatné \v{c}asti herného engínu, aby kód v pou\v{z}ívate\v{l}ovom komponente pracujúci s engínom bol \v{c}o naj\-jednoduch\v{s}í.
-	
-\end{enumerate}
   
 
 \section{Preh\v{l}ad obsahu sekcií} \label{content}
@@ -95,26 +83,35 @@ Sekcia~\ref{recentwork} sumarizuje preh\v{l}ad \v{d}al\v{s}ích publikácií a v
 Sekcia~\ref{cc} obsahuje zhodnotenie práce a \v{d}al\v{s}ích mo\v{z}ností roz\v{s}írenia tejto práce.
 
 
-\section{Rad softvérových výrobkov a analýza domény} \label{insight}
+\section{Software product line and domain analysis} \label{insight}
 
 
-\section{Aktuálny stav a návrh riešenia pre hru Battleship} \label{analysis}
+\section{Actual state and design of solution for Battleship game} \label{analysis}
+
+To provide the most appropriate feature model which can capture potential needs of customer and domain knowledge to serve as basis for our later analysis we choose already provided one. Mentioned feature model is a part of the Battleship game in one repository for which depicts its features. Battleship game is simple game consisting of two players trying to destroy ships to each other. Lot of improvements are possible to include as additional features to make the game more interesting. We think that given feature model is based of performed domain analysis and identified many features with decision of their optionality.
+
+Firstly, we need to mention some problems of provided implementation of Java Battleship game. Only some of mandatory features were provided in unconfigurable way. From feature model we can name features like player names, collecting statistics, computer strategy subtree and challenge as unimplemented. Many features are hardcoded and can not be easily enhanced without code refactoring. Other aspect of such implementation is that user cant choose one option from given options without modifying code. For example choosing difficulty option in the game. The same code is repeated in many classes and methods. It lacks of some object oriented programming practises. No encapsulation resulting in free access to public variables from any class. Another identified problem was that concerns were not fully separated. For example setup of player was not included in player class. Some static method should be converted to dynamic ones to be associated to given instance. This game use console only and not have any graphic user interface. We let console interface as is. Implementation not provide any possibility of product derivation at all. Potential refactoring was required then. 
+
+Mentioned Battleship game is not large and not have many features, but can serve as potential board game domain application. We can evaluate its benefits on using aspects and creation of software product line with final product derivation. Separation of concerns is the main benefit observed from development enabling divide components as separated classes and aspects during product derivation into separated files for each feature and making development easier. Because of aspects, new features often do not need to change existing code and require only to specify new functionality with pointcuts and managing collisions. This functionality can be easily managed using configuration file with static variables which are used in if condition of given advice. If condition is true, then functionality will be applied otherwise not. Not only extending existing or adding new features are possible using aspects. But configuring existing classes changing their parameters is possible too. These aspects can be also replaced by other aspects which use different strategy. Solution should be more configurable, modular and easily can respond to changes. Not all changes are possible, but with modularity enabling easy product derivation these can be developed separately.
 
 
-\begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
+
+\begin{figure}[t]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
 									\includegraphics[width=\linewidth]{fig/battleshipFeatureModel.png}
-									\caption{Diagram vlastností pre hru Battleship}
+									\caption{Feature diagram for Java Battleship game}
 									\label{battleshipFeatureModel}
 					\end{center}
 \end{figure}
 
-\section{Úprava hry Battleship s použitím jazyka AspectJ} \label{analysis}
 
-\begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
+\section{Refactoring of Battleship game with using AspectJ language} \label{analysis}
+
+
+\begin{figure}[t]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
 									\includegraphics[width=\linewidth]{fig/refactoredSchema.png}
-									\caption{Diagram tried upraveného riešenia}
+									\caption{Class Diagram of modified solution}
 									\label{refactoredSchema}
 					\end{center}
 \end{figure}
@@ -123,7 +120,7 @@ Sekcia~\ref{cc} obsahuje zhodnotenie práce a \v{d}al\v{s}ích mo\v{z}ností roz
 \begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
 									\includegraphics[height=10cm]{fig/playerAbstraction.png}
-									\caption{Abstrakcia hráča}
+									\caption{Player abstraction}
 									\label{playerAbstraction}
 					\end{center}
 \end{figure}
@@ -140,33 +137,56 @@ Po prvej iterácii je diagram balíkov zobrazený na obrázku \ref{problemsOfAsp
 
 
 
-\section{Odvodenie konkrétnej Battleship hry} \label{layersSection}
+\section{Derivation of given Battleship game} \label{layersSection}
+
+If classes and aspects are available there should be question how to separate given features from others except only configure aspects.
+We come with idea, that we can copy files or part of them which represents required features. It will be based on feature models as previous part. Mandatory features from the top of the three always should be copied. Other features deeper in feature tree often require from their parents to be included. This creates new problem how to copy such files. We needed rules which can be mappped to features. We again come with idea of creating annotations with expression enabling specify condition when such feature should be copied and when not. Mapping of some features with given values to feature tree can be seen on picture \ref{derivationRules}. For example if variable playerNames is true, then it all necessary classes for this feature will be copied in final solution. If rule will be empty then will be evaluated as true. If any  file will be without annotation or all rules of its annotations will be false, then file will not be copied into final solution.
 
 \begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
 									\includegraphics[width=\linewidth]{fig/derivationRules.png}
-									\caption{Podoba derivačných pravidiel}
+									\caption{Derivation rules}
 									\label{derivationRules}
 					\end{center}
 \end{figure}
 
-\begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
+
+We specified three types of annotations:
+
+\begin{enumerate}
+	\item The first annotation is //@\{\}. This annotation can be used on classes, interfaces or aspects to copy whole file. Additional check can be added to program, that one of these keywords should be included after annotation.
+
+	\item The second annotation is //\#\{\}. This annotation is suitable for include or exclude given methods. If file should be copied then at least one condition of annotation should be true. It should not be mixed with first one. 
+
+	\item The third annotation is //\%\{\}. Using this annotation some imports can be included or excluded according including or excluding given method from file. It can be used with second type of annotation. 
+\end{enumerate}
+
+We mainly use first type of annotation, but in some cases remaining two should be used. Because that solution is modular it is possible to copy all files for each feature and make derived product functional. We can say so in situation where splitting some files with many features occurring at one place can be solution, but destroing such entities and their responsibilities at all. Because of it remaining two annotations are used. Content can be managed effectively then. Because we include or exclude methods and they can import classes which in some cases will not be part of final solution its necessary to annotate them using third annotation to be included or excluded. Typical example is functionality for setting names. Two methods are annotated with second annotation. Both of them expects that variable setNames will be true if they should be included. Only second method for setting computer name has another condition in annotation that computerOpponent variable should be set to true, otherwise method will not be copied. 
+ 
+For making more complex condition we enable to use AND and OR operators to specify relation between variables as is described on picture \ref{complexDerivationRule}. We use recursion to evaluate them. If no operators are used expression is evaluated as AND statement. For AND operator all children should be true. For OR operator at least one should be true.
+
+\begin{figure}[t]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
 									\includegraphics[width=\linewidth]{fig/expresion.png}
 									\caption{Zložený derivačný výraz}
-									\label{derivationRule}
+									\label{complexDerivationRule}
 					\end{center}
 \end{figure}
 
-\begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
+Class diagram for given solution is depicted on picture \ref{derivationProductClassDiagram}. DerivationManager class manages derivation and contain all necessary tools for this operations. For example project copier to copy empty project without classes or FileCopy class to manage reading and writing of given file as stream. During copying is necessary to find if file should be coped or not. For this purpose program needs to find annotation and evaluate its expressions. Searching is done by DerivationAnnotationManager which is using abstract class DerivationAnnotation with all of possible derivation annotation classes which extends this mentioned abstract class and deals with its own type of processing annotation. Available are methods working with StringBuilder to save string for later or Writer to write values immediately. Each annotation should check if some keywords are included. For example aspect, interface or class for first type of annotation. DerivationVariableProcessor class helps DerivationAnnotationManager to evaluate expression associated with annotation. Provided implementation should evaluate expressions with AND and OR operators too. It needs to know used variables and their values to decide mentioned expression correctly. Mapping is provided by ConfigurationVariableManager.
+
+\begin{figure}[t]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
 									\includegraphics[width=\linewidth]{fig/DerivationClass.png}
-									\caption{Diagram tried pre deriváciu produktu}
+									\caption{Class diagram for product derivation}
 									\label{derivationProductClassDiagram}
 					\end{center}
 \end{figure}
 
-\begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
+
+We also model dynamic behavior for this generator as is depicted on picture \ref{derivationProductSequenceDiagram}. At the beginning developer chooses features setting values to configuration file. After method for derivation is called and configuration file is applied then DerivationManager class firstly copy empty project to specified result place. After it FileCopy class is used. For each file in source src directory tries to find annotation using DerivationAnnotationManager. If annotation is found then DerivationVariableProcessor class evaluates condition. If condition is true, annotation is processed using given implementation for given type of annotation. If file not have annotations or all expressions results in false result then the file will be deleted. 
+
+\begin{figure}[!t]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
 									\includegraphics[width=\linewidth]{fig/derivationProcess.png}
 									\caption{Sekvenčný diagram pre deriváciu produktu}
@@ -175,23 +195,20 @@ Po prvej iterácii je diagram balíkov zobrazený na obrázku \ref{problemsOfAsp
 \end{figure}
 
 
-\section{Odvodzovanie všetkých typov hier} \label{engineAsSubsystem}
+\section{Derivation of all types of Battleship games} \label{engineAsSubsystem}
 
-Aj 
+Feature models helps to determine variability in solution. According them it is possible to apply given derivation. We used variables from configuration too, but also other classes that generate all possible derivations. Changing configuration variables was necessary. We need to create another configuration file where variable names are specified with other information about them. For example variable type and number of possible cases. Variable can have boolean type and possible cases are two, true and false. if variable have string type, cases should be named explicitly in array. For example if we can include difficulty setting and include it in derivation products then possible cases will be three. Namely easy, medium and hard. We named configuration file as variableRestrictions.json. Generator will generate all cofiguration for all cases of given variables. For each configuration described derivation method will be called. In our project we created 2 * 2 * 2 * 2 * 3 = 48 derivations as depicts picture \ref{derivationBattleshipTypes}.  
 
 \begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
 									\includegraphics[width=\linewidth]{fig/allCases.png}
-									\caption{Odvodenie všetkých typov hier pre hru Battleship}
+									\caption{Derivation of all Battleship game types}
 									\label{derivationBattleshipTypes}
 					\end{center}
 \end{figure}
 
-Kompon    
 
-
-
-\section{Rad softvérových výrobkov pre fraktály} \label{distributedSOA}
+\section{Software product line for fractals} \label{distributedSOA}
 
 SOA vyu\ 
 
@@ -226,7 +243,7 @@ Vytvorili
 Kód kt
 
 
-\section{Závery a \v{d}al\v{s}ie pokra\v{c}ovanie} \label{cc}
+\section{Conclusions and next work} \label{cc}
 
 Analyzo
  

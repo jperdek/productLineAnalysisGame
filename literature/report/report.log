@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (MiKTeX 21.2) (format=lualatex 2021.10.30)  9 NOV 2021 01:03
+This is LuaHBTeX, Version 1.13.0 (MiKTeX 21.2) (format=lualatex 2021.10.30)  31 OCT 2021 01:12
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -500,144 +500,176 @@ Missing character: There is no ť (U+0165) in font ec-lmr10!
 ]
 
 LaTeX Warning: Reference `applicationJavascript' on page 2 undefined on input l
-ine 80.
+ine 92.
+
+[2]
+<fig/battleshipFeatureModel.png, id=95, 701.019pt x 240.9pt>
+File: fig/battleshipFeatureModel.png Graphic file (type png)
+<use fig/battleshipFeatureModel.png>
+Package luatex.def Info: fig/battleshipFeatureModel.png  used on input line 106
+.
+(luatex.def)             Requested size: 360.0pt x 123.71384pt.
+<fig/refactoredSchema.png, id=96, 800.9925pt x 502.2765pt>
+File: fig/refactoredSchema.png Graphic file (type png)
+<use fig/refactoredSchema.png>
+Package luatex.def Info: fig/refactoredSchema.png  used on input line 116.
+(luatex.def)             Requested size: 360.0pt x 225.74643pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 3199) has occurred while \output is active []
-
- [2]
-Overfull \hbox (29.33153pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 Qu-ality of re-fac-to-red code, mo-du-la-rity and pro-duct de
--ri-va-tion 2021/22, FIIT STU \T1/lmr/m/n/10.95 3
+Overfull \hbox (54.94315pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 Kva-lita re-fak-to-ro-va-ného kódu, mo-du-lár-nosť a de-r
+i-vo-va-nie pro-duk-tov 2021/22, FIIT STU \T1/lmr/m/n/10.95 3
  []
 
 [3
+Missing character: There is no ť (U+0165) in font ec-lmro10!
 Missing character: There is no ť (U+0165) in font ec-lmr10!
-]
-<fig/battleshipFeatureModel.png, id=92, 701.019pt x 240.9pt>
-File: fig/battleshipFeatureModel.png Graphic file (type png)
-<use fig/battleshipFeatureModel.png>
-Package luatex.def Info: fig/battleshipFeatureModel.png  used on input line 101
-.
-(luatex.def)             Requested size: 360.0pt x 123.71384pt.
-<fig/refactoredSchema.png, id=93, 800.9925pt x 502.2765pt>
-File: fig/refactoredSchema.png Graphic file (type png)
-<use fig/refactoredSchema.png>
-Package luatex.def Info: fig/refactoredSchema.png  used on input line 113.
-(luatex.def)             Requested size: 360.0pt x 225.74643pt.
-<fig/playerAbstraction.png, id=94, 428.19975pt x 305.34074pt>
+Missing character: There is no š (U+0161) in font ec-lmbx12!
+<./fig/battleshipFeatureModel.png>]
+<fig/playerAbstraction.png, id=103, 428.19975pt x 305.34074pt>
 File: fig/playerAbstraction.png Graphic file (type png)
 <use fig/playerAbstraction.png>
-Package luatex.def Info: fig/playerAbstraction.png  used on input line 122.
+Package luatex.def Info: fig/playerAbstraction.png  used on input line 125.
 (luatex.def)             Requested size: 399.0449pt x 284.52756pt.
 
-Overfull \hbox (39.0449pt too wide) in paragraph at lines 122--123
+Overfull \hbox (39.0449pt too wide) in paragraph at lines 125--126
  [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]
-<fig/problemsOfAspectJ.png, id=100, 1097.90175pt x 464.33475pt>
+ [4
+Missing character: There is no ž (U+017E) in font ec-lmbx12!
+Missing character: There is no š (U+0161) in font ec-lmr10!
+<./fig/refactoredSchema.png>]
+<fig/problemsOfAspectJ.png, id=110, 1097.90175pt x 464.33475pt>
 File: fig/problemsOfAspectJ.png Graphic file (type png)
 <use fig/problemsOfAspectJ.png>
-Package luatex.def Info: fig/problemsOfAspectJ.png  used on input line 132.
+Package luatex.def Info: fig/problemsOfAspectJ.png  used on input line 135.
 (luatex.def)             Requested size: 360.0pt x 152.25317pt.
-
-Overfull \hbox (29.33153pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 Qu-ality of re-fac-to-red code, mo-du-la-rity and pro-duct de
--ri-va-tion 2021/22, FIIT STU \T1/lmr/m/n/10.95 5
- []
-
-[5<./fig/battleshipFeatureModel.png><./fig/playerAbstraction.png>] [6
-Missing character: There is no ž (U+017E) in font ec-lmr10!
-<./fig/refactoredSchema.png><./fig/problemsOfAspectJ.png>]
-<fig/derivationRules.png, id=115, 1156.32pt x 650.43pt>
+<fig/derivationRules.png, id=111, 1156.32pt x 650.43pt>
 File: fig/derivationRules.png Graphic file (type png)
 <use fig/derivationRules.png>
 Package luatex.def Info: fig/derivationRules.png  used on input line 147.
 (luatex.def)             Requested size: 360.0pt x 202.49466pt.
 
-Overfull \hbox (29.33153pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 Qu-ality of re-fac-to-red code, mo-du-la-rity and pro-duct de
--ri-va-tion 2021/22, FIIT STU \T1/lmr/m/n/10.95 7
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (54.94315pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 Kva-lita re-fak-to-ro-va-ného kódu, mo-du-lár-nosť a de-r
+i-vo-va-nie pro-duk-tov 2021/22, FIIT STU \T1/lmr/m/n/10.95 5
  []
 
-[7<./fig/derivationRules.png>]
-<fig/expresion.png, id=126, 299.31825pt x 240.9pt>
+[5
+Missing character: There is no ť (U+0165) in font ec-lmro10!
+Missing character: There is no č (U+010D) in font ec-lmr10!
+Missing character: There is no ž (U+017E) in font ec-lmr10!
+<./fig/playerAbstraction.png><./fig/problemsOfAspectJ.png>]
+<fig/expresion.png, id=119, 299.31825pt x 240.9pt>
 File: fig/expresion.png Graphic file (type png)
 <use fig/expresion.png>
-Package luatex.def Info: fig/expresion.png  used on input line 170.
+Package luatex.def Info: fig/expresion.png  used on input line 155.
 (luatex.def)             Requested size: 360.0pt x 289.74019pt.
-<fig/DerivationClass.png, id=128, 815.4465pt x 539.616pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6
+Missing character: There is no č (U+010D) in font ec-lmr10!
+<./fig/derivationRules.png>]
+<fig/DerivationClass.png, id=125, 815.4465pt x 539.616pt>
 File: fig/DerivationClass.png Graphic file (type png)
 <use fig/DerivationClass.png>
-Package luatex.def Info: fig/DerivationClass.png  used on input line 180.
+Package luatex.def Info: fig/DerivationClass.png  used on input line 163.
 (luatex.def)             Requested size: 360.0pt x 238.22223pt.
- [8]
-<fig/derivationProcess.png, id=138, 808.2195pt x 931.0785pt>
-File: fig/derivationProcess.png Graphic file (type png)
-<use fig/derivationProcess.png>
-Package luatex.def Info: fig/derivationProcess.png  used on input line 191.
-(luatex.def)             Requested size: 360.0pt x 414.73354pt.
 
-Overfull \hbox (29.33153pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 Qu-ality of re-fac-to-red code, mo-du-la-rity and pro-duct de
--ri-va-tion 2021/22, FIIT STU \T1/lmr/m/n/10.95 9
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (54.94315pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 Kva-lita re-fak-to-ro-va-ného kódu, mo-du-lár-nosť a de-r
+i-vo-va-nie pro-duk-tov 2021/22, FIIT STU \T1/lmr/m/n/10.95 7
  []
 
-[9
+[7
+Missing character: There is no ť (U+0165) in font ec-lmro10!
 Missing character: There is no ž (U+017E) in font ec-lmr10!
 Missing character: There is no č (U+010D) in font ec-lmr10!
 <./fig/expresion.png>]
-<fig/allCases.png, id=144, 752.21025pt x 412.54124pt>
+<fig/derivationProcess.png, id=131, 808.2195pt x 931.0785pt>
+File: fig/derivationProcess.png Graphic file (type png)
+<use fig/derivationProcess.png>
+Package luatex.def Info: fig/derivationProcess.png  used on input line 171.
+(luatex.def)             Requested size: 360.0pt x 414.73354pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8<./fig/DerivationClass.png>]
+<fig/allCases.png, id=137, 752.21025pt x 412.54124pt>
 File: fig/allCases.png Graphic file (type png)
 <use fig/allCases.png>
-Package luatex.def Info: fig/allCases.png  used on input line 204.
+Package luatex.def Info: fig/allCases.png  used on input line 184.
 (luatex.def)             Requested size: 360.0pt x 197.43842pt.
-<fig/fractalsAnklet.png, id=145, 938.3055pt x 300.52275pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (54.94315pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 Kva-lita re-fak-to-ro-va-ného kódu, mo-du-lár-nosť a de-r
+i-vo-va-nie pro-duk-tov 2021/22, FIIT STU \T1/lmr/m/n/10.95 9
+ []
+
+[9
+Missing character: There is no ť (U+0165) in font ec-lmro10!
+Missing character: There is no č (U+010D) in font ec-lmr10!
+Missing character: There is no š (U+0161) in font ec-lmbx12!
+<./fig/derivationProcess.png>]
+<fig/fractalsAnklet.png, id=143, 938.3055pt x 300.52275pt>
 File: fig/fractalsAnklet.png Graphic file (type png)
 <use fig/fractalsAnklet.png>
-Package luatex.def Info: fig/fractalsAnklet.png  used on input line 217.
+Package luatex.def Info: fig/fractalsAnklet.png  used on input line 200.
 (luatex.def)             Requested size: 360.0pt x 115.30037pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10<./fig/DerivationClass.png><./fig/allCases.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (34.80652pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 Qu-ality of re-fac-to-red code, mo-du-la-rity and pro-duct de
--ri-va-tion 2021/22, FIIT STU \T1/lmr/m/n/10.95 11
+ [10
+Missing character: There is no š (U+0161) in font ec-lmr10!
+<./fig/allCases.png><./fig/fractalsAnklet.png>] (./report.bbl)
+Overfull \hbox (60.41814pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10.95 Kva-lita re-fak-to-ro-va-ného kódu, mo-du-lár-nosť a de-r
+i-vo-va-nie pro-duk-tov 2021/22, FIIT STU \T1/lmr/m/n/10.95 11
  []
 
 [11
-Missing character: There is no č (U+010D) in font ec-lmr10!
-<./fig/derivationProcess.png>] (./report.bbl) [12
+Missing character: There is no ť (U+0165) in font ec-lmro10!
 Missing character: There is no ž (U+017E) in font ec-lmbx12!
-<./fig/fractalsAnklet.png>] (./report.aux)
+] (./report.aux)
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 82C747F994598CDD36217211E4A12776;3184.
+
+Package rerunfilecheck Warning: File `report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `report.out':
+(rerunfilecheck)             Before: A00A191BDB47D6D301D8CD01AD40847F;3081
+(rerunfilecheck)             After:  8EEEE4C6FBC4FDAC109C95D10BE3C3D7;3095.
 )
 
 Here is how much of LuaTeX's memory you used:
- 11365 strings out of 478540
+ 11369 strings out of 478540
  100000,552014 words of node,token memory allocated
  454 words of node memory still in use:
    4 hlist, 1 vlist, 1 rule, 5 glue, 3 kern, 1 glyph, 7 attribute, 50 glue_spec,
  5 attribute_list, 1 write nodes
-   avail lists: 2:350,3:172,4:35,5:583,6:30,7:8595,8:25,9:148,10:24,11:955
- 30783 multiletter control sequences out of 65536+200000
+   avail lists: 2:287,3:155,4:30,5:594,6:28,7:6656,8:34,9:148,10:23,11:767
+ 30784 multiletter control sequences out of 65536+200000
  44 fonts using 4179479 bytes
- 71i,6n,71p,1340b,465s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,6n,71p,934b,465s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/U
 sers/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Us
 ers/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Use
@@ -646,9 +678,9 @@ rs/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users
 erde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/per
 de/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/perd
 e/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb>
-Output written on report.pdf (12 pages, 1593314 bytes).
+Output written on report.pdf (11 pages, 1580819 bytes).
 
-PDF statistics: 192 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 131072)
+PDF statistics: 185 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 131072)
  113 words of extra memory for PDF output out of 10000 (max. 100000000)
 
