@@ -184,7 +184,7 @@ Class diagram for given solution is depicted on picture \ref{derivationProductCl
 \end{figure}
 
 
-We also model dynamic behavior for this generator as is depicted on picture \ref{derivationProductSequenceDiagram}. At the beginning developer chooses features setting values to configuration file. After method for derivation is called and configuration file is applied then DerivationManager class firstly copy empty project to specified result place. After it FileCopy class is used. For each file in source src directory tries to find annotation using DerivationAnnotationManager. If annotation is found then DerivationVariableProcessor class evaluates condition. If condition is true, annotation is processed using given implementation for given type of annotation. If file not have annotations or all expressions results in false result then the file will be deleted. 
+We also model dynamic behavior for this generator as is depicted on picture \ref{derivationProductSequenceDiagram}. At the beginning developer chooses features setting values to configuration file. After method for derivation is called and configuration file is applied then DerivationManager class firstly copy empty project to specified result place. After it FileCopy class is used. For each file in source src directory tries to find annotation using DerivationAnnotationManager. If annotation is found then DerivationVariableProcessor class evaluates condition. If condition is true, annotation is processed using given implementation for given type of annotation. If file not have annotations or all expressions results in false result then the file will be deleted.
 
 \begin{figure}[!t]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
