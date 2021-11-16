@@ -74,7 +74,7 @@
     },
     "difficulty": "easy",
     "playerNames": true,
-    "computerOpponent": false,
+    "computerOpponent": true,
     "statistics": false,
     "challenge": false
 }
