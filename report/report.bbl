@@ -1,15 +1,47 @@
 \begin{thebibliography}{1}
 
+\bibitem{beuche_software_2006}
+D.~Beuche and M.~Dalgarno.
+\newblock Software product line engineering with feature models.
+\newblock page~7, 2006.
+
+\bibitem{botterweck_automating_2009}
+G.~Botterweck, K.~Lee, and S.~Thiel.
+\newblock Automating product derivation in software product line engineering.
+\newblock page~6, 2009.
+
+\bibitem{kastner_case_2007}
+C.~Kastner, S.~Apel, and D.~Batory.
+\newblock A case study implementing features using {AspectJ}.
+\newblock In {\em 11th International Software Product Line Conference ({SPLC}
+  2007)}, pages 223--232. {IEEE}, 2007.
+
 \bibitem{laddad_aspectj_2003}
 R.~Laddad.
 \newblock {\em {AspectJ} in action: practical aspect-oriented programming}.
-\newblock Manning, Greenwich, CT, 2003.
-\newblock OCLC: ocm53049913.
+\newblock Manning, 2003.
+\newblock {OCLC}: ocm53049913.
+
+\bibitem{pelanek_programatorska_2012}
+R.~Pelánek.
+\newblock {\em Programátorská cvičebnice}.
+\newblock Computer press, 1. vydání edition, 2012.
+
+\bibitem{reinhartz-berger_domain_2013}
+I.~Reinhartz{-}Berger, A.~Sturm, T.~Clark, S.~Cohen, and J.~Bettin, editors.
+\newblock {\em Domain Engineering, Product Lines, Languages, and Conceptual
+  Models}.
+\newblock Springer, 2013.
+
+\bibitem{vranic_features_2016}
+V.~Vranic and R.~Táborský.
+\newblock Features as transformations: A generative approach to software
+  development.
+\newblock 13(3):759--778, 2016.
 
 \bibitem{young_using_1999}
 T.~J. Young and B.~Math.
-\newblock Using {AspectJ} to {Build} a {Software} {Product} {Line} for {Mobile}
-  {Devices}.
+\newblock Using {AspectJ} to build a software product line for mobile devices.
 \newblock page~73, 1999.
 
 \end{thebibliography}

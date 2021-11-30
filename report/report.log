@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (MiKTeX 21.2) (format=lualatex 2021.10.30)  16 NOV 2021 01:38
+This is LuaHBTeX, Version 1.13.0 (MiKTeX 21.2) (format=lualatex 2021.10.30)  30 NOV 2021 00:14
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -478,187 +478,136 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 50.
+ [1
 
-Overfull \hbox (8.27753pt too wide) in paragraph at lines 54--55
-[]\T1/lmr/m/n/10 Zau-jíma nás preto uplat-ne-nie ja-zyka pri umo-ºnení kon-f
-i-gu-ro-vate©nosti
- []
-
-
-Overfull \hbox (7.24959pt too wide) in paragraph at lines 56--57
-[]\T1/lmr/m/n/10 Plá-nu-jeme pris-pô-sobi´ exis-tu-júcu hru Batt-les-hip tak
-, aby umoº¬ovala
- []
-
-[1
-
-{C:/Users/perde/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
-Missing character: There is no ť (U+0165) in font ec-lmr10!
-]
-Underfull \vbox (badness 3199) has occurred while \output is active []
+{C:/Users/perde/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Overfull \hbox (29.33153pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 Qu-ality of re-fac-to-red code, mo-du-la-rity and pro-duct de
--ri-va-tion 2021/22, FIIT STU \T1/lmr/m/n/10.95 3
- []
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 97.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 97.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 97.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
+7.
 
-[3]
-<fig/battleshipFeatureModel.png, id=93, 701.019pt x 240.9pt>
+(C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [3]
+<fig/battleshipFeatureModel.png, id=106, 701.019pt x 240.9pt>
 File: fig/battleshipFeatureModel.png Graphic file (type png)
 <use fig/battleshipFeatureModel.png>
-Package luatex.def Info: fig/battleshipFeatureModel.png  used on input line 103
+Package luatex.def Info: fig/battleshipFeatureModel.png  used on input line 106
 .
 (luatex.def)             Requested size: 360.0pt x 123.71384pt.
-<fig/refactoredSchema.png, id=94, 800.9925pt x 502.2765pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+<fig/refactoredSchema.png, id=120, 802.79926pt x 574.5465pt>
 File: fig/refactoredSchema.png Graphic file (type png)
 <use fig/refactoredSchema.png>
-Package luatex.def Info: fig/refactoredSchema.png  used on input line 115.
-(luatex.def)             Requested size: 360.0pt x 225.74643pt.
-<fig/playerAbstraction.png, id=95, 428.19975pt x 305.34074pt>
+Package luatex.def Info: fig/refactoredSchema.png  used on input line 120.
+(luatex.def)             Requested size: 360.0pt x 257.6493pt.
+
+[5<./fig/battleshipFeatureModel.png>]
+Underfull \vbox (badness 2088) has occurred while \output is active []
+
+ [6<./fig/refactoredSchema.png>]
+<fig/playerAbstraction.png, id=135, 430.0065pt x 346.896pt>
 File: fig/playerAbstraction.png Graphic file (type png)
 <use fig/playerAbstraction.png>
-Package luatex.def Info: fig/playerAbstraction.png  used on input line 124.
-(luatex.def)             Requested size: 399.0449pt x 284.52756pt.
-
-Overfull \hbox (39.0449pt too wide) in paragraph at lines 124--125
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4<./fig/battleshipFeatureModel.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (29.33153pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 Qu-ality of re-fac-to-red code, mo-du-la-rity and pro-duct de
--ri-va-tion 2021/22, FIIT STU \T1/lmr/m/n/10.95 5
- []
-
-[5<./fig/refactoredSchema.png>]
-<fig/problemsOfAspectJ.png, id=107, 1097.90175pt x 464.33475pt>
-File: fig/problemsOfAspectJ.png Graphic file (type png)
-<use fig/problemsOfAspectJ.png>
-Package luatex.def Info: fig/problemsOfAspectJ.png  used on input line 134.
-(luatex.def)             Requested size: 360.0pt x 152.25317pt.
+Package luatex.def Info: fig/playerAbstraction.png  used on input line 138.
+(luatex.def)             Requested size: 352.71259pt x 284.52756pt.
+<fig/problemsOfAspectJEN.png, id=137, 1148.49075pt x 469.15276pt>
+File: fig/problemsOfAspectJEN.png Graphic file (type png)
+<use fig/problemsOfAspectJEN.png>
+Package luatex.def Info: fig/problemsOfAspectJEN.png  used on input line 148.
+(luatex.def)             Requested size: 360.0pt x 147.05371pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6<./fig/playerAbstraction.png>]
-<fig/derivationRules.png, id=116, 1156.32pt x 650.43pt>
+ [7<./fig/playerAbstraction.png>]
+<fig/derivationRules.png, id=145, 1156.32pt x 650.43pt>
 File: fig/derivationRules.png Graphic file (type png)
 <use fig/derivationRules.png>
-Package luatex.def Info: fig/derivationRules.png  used on input line 149.
+Package luatex.def Info: fig/derivationRules.png  used on input line 162.
 (luatex.def)             Requested size: 360.0pt x 202.49466pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \hbox (29.33153pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 Qu-ality of re-fac-to-red code, mo-du-la-rity and pro-duct de
--ri-va-tion 2021/22, FIIT STU \T1/lmr/m/n/10.95 7
- []
-
-[7
-Missing character: There is no ž (U+017E) in font ec-lmr10!
-<./fig/problemsOfAspectJ.png>] [8<./fig/derivationRules.png>]
-<fig/expresion.png, id=131, 299.31825pt x 240.9pt>
+ [8<./fig/problemsOfAspectJEN.png>] [9<./fig/derivationRules.png>]
+<fig/expresion.png, id=162, 299.31825pt x 240.9pt>
 File: fig/expresion.png Graphic file (type png)
 <use fig/expresion.png>
-Package luatex.def Info: fig/expresion.png  used on input line 172.
-(luatex.def)             Requested size: 360.0pt x 289.74019pt.
+Package luatex.def Info: fig/expresion.png  used on input line 186.
+(luatex.def)             Requested size: 233.9978pt x 188.3313pt.
 
-Overfull \hbox (29.33153pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 Qu-ality of re-fac-to-red code, mo-du-la-rity and pro-duct de
--ri-va-tion 2021/22, FIIT STU \T1/lmr/m/n/10.95 9
- []
+Underfull \vbox (badness 2932) has occurred while \output is active []
 
-[9
-Missing character: There is no ž (U+017E) in font ec-lmr10!
-Missing character: There is no č (U+010D) in font ec-lmr10!
-<./fig/expresion.png>]
-<fig/DerivationClass.png, id=140, 815.4465pt x 539.616pt>
-File: fig/DerivationClass.png Graphic file (type png)
-<use fig/DerivationClass.png>
-Package luatex.def Info: fig/DerivationClass.png  used on input line 182.
-(luatex.def)             Requested size: 360.0pt x 238.22223pt.
-<fig/derivationProcess.png, id=142, 808.2195pt x 931.0785pt>
-File: fig/derivationProcess.png Graphic file (type png)
-<use fig/derivationProcess.png>
-Package luatex.def Info: fig/derivationProcess.png  used on input line 193.
-(luatex.def)             Requested size: 360.0pt x 414.73354pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10<./fig/DerivationClass.png>]
-Overfull \hbox (34.80652pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 Qu-ality of re-fac-to-red code, mo-du-la-rity and pro-duct de
--ri-va-tion 2021/22, FIIT STU \T1/lmr/m/n/10.95 11
- []
-
-[11
-Missing character: There is no č (U+010D) in font ec-lmr10!
-<./fig/derivationProcess.png>]
-<fig/allCases.png, id=155, 752.21025pt x 412.54124pt>
+ [10<./fig/expresion.png>]
+<fig/DerivationClassTight.png, id=171, 1243.044pt x 1455.63824pt>
+File: fig/DerivationClassTight.png Graphic file (type png)
+<use fig/DerivationClassTight.png>
+Package luatex.def Info: fig/DerivationClassTight.png  used on input line 197.
+(luatex.def)             Requested size: 360.0pt x 421.569pt.
+ [11<./fig/DerivationClassTight.png>]
+<fig/derivationProcessTight.png, id=180, 1558.02075pt x 1241.8395pt>
+File: fig/derivationProcessTight.png Graphic file (type png)
+<use fig/derivationProcessTight.png>
+Package luatex.def Info: fig/derivationProcessTight.png  used on input line 208
+.
+(luatex.def)             Requested size: 360.0pt x 286.9435pt.
+ [12<./fig/derivationProcessTight.png>]
+<fig/allCases.png, id=186, 752.21025pt x 412.54124pt>
 File: fig/allCases.png Graphic file (type png)
 <use fig/allCases.png>
-Package luatex.def Info: fig/allCases.png  used on input line 206.
+Package luatex.def Info: fig/allCases.png  used on input line 221.
 (luatex.def)             Requested size: 360.0pt x 197.43842pt.
- [12<./fig/allCases.png>]
-<fig/fractalsAnklet.png, id=162, 938.3055pt x 300.52275pt>
+ [13<./fig/allCases.png>]
+<fig/fractalsAnklet.png, id=194, 938.3055pt x 300.52275pt>
 File: fig/fractalsAnklet.png Graphic file (type png)
 <use fig/fractalsAnklet.png>
-Package luatex.def Info: fig/fractalsAnklet.png  used on input line 221.
+Package luatex.def Info: fig/fractalsAnklet.png  used on input line 236.
 (luatex.def)             Requested size: 360.0pt x 115.30037pt.
-
-Overfull \hbox (34.80652pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 Qu-ality of re-fac-to-red code, mo-du-la-rity and pro-duct de
--ri-va-tion 2021/22, FIIT STU \T1/lmr/m/n/10.95 13
- []
-
-[13<./fig/fractalsAnklet.png>] (./report.bbl [14])
-Overfull \hbox (34.80652pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10.95 Qu-ality of re-fac-to-red code, mo-du-la-rity and pro-duct de
--ri-va-tion 2021/22, FIIT STU \T1/lmr/m/n/10.95 15
- []
-
-[15] (./report.aux)
+ [14<./fig/fractalsAnklet.png>]
+(./report.bbl [15]) [16
+Missing character: There is no č (U+010D) in font ec-lmri10!
+] (./report.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: 3B788960EB445773E8645C1642A0EF14;3216
-(rerunfilecheck)             After:  F2C7E2C863308D77B0BF2BF75C5BE715;3230.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: DDFA78A91CA9C4F175499E5BE8364745;3456.
 )
 
 Here is how much of LuaTeX's memory you used:
- 11368 strings out of 478540
+ 11433 strings out of 478540
  100000,552014 words of node,token memory allocated
- 454 words of node memory still in use:
-   4 hlist, 1 vlist, 1 rule, 5 glue, 3 kern, 1 glyph, 7 attribute, 50 glue_spec,
- 5 attribute_list, 1 write nodes
-   avail lists: 2:275,3:134,4:35,5:558,6:29,7:7185,8:27,9:148,10:24,11:800
- 30783 multiletter control sequences out of 65536+200000
- 43 fonts using 4096799 bytes
- 71i,6n,71p,1340b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 480 words of node memory still in use:
+   4 hlist, 1 vlist, 1 rule, 7 glue, 3 kern, 1 glyph, 11 attribute, 50 glue_spec
+, 7 attribute_list, 1 write nodes
+   avail lists: 2:287,3:146,4:37,5:437,6:35,7:8134,8:63,9:164,10:25,11:883
+ 30833 multiletter control sequences out of 65536+200000
+ 56 fonts using 4986431 bytes
+ 71i,8n,71p,1368b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/U
-sers/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Us
-ers/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Use
-rs/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users
-/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/p
-erde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/per
-de/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/perd
-e/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb>
-Output written on report.pdf (15 pages, 1598513 bytes).
+sers/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb><C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
+b><C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb
+><C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><
+C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:
+/Users/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/U
+sers/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/User
+s/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/p
+erde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/pe
+rde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Users/per
+de/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on report.pdf (16 pages, 1938842 bytes).
 
-PDF statistics: 206 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 131072)
+PDF statistics: 250 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 131072)
  113 words of extra memory for PDF output out of 10000 (max. 100000000)
 
