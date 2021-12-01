@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{beuche_software_2006}
 D.~Beuche and M.~Dalgarno.
@@ -22,6 +22,12 @@ R.~Laddad.
 \newblock Manning, 2003.
 \newblock {OCLC}: ocm53049913.
 
+\bibitem{hotdraw_deursen_2009}
+M.~Marin, A.~Deursen, L.~Moonen, and R.~Rijst.
+\newblock An integrated crosscutting concern migration strategy and its
+  semi-automated application to jhotdraw.
+\newblock {\em Autom. Softw. Eng.}, 16:323--356, 06 2009.
+
 \bibitem{pelanek_programatorska_2012}
 R.~Pelánek.
 \newblock {\em Programátorská cvičebnice}.
@@ -38,6 +44,14 @@ V.~Vranic and R.~Táborský.
 \newblock Features as transformations: A generative approach to software
   development.
 \newblock 13(3):759--778, 2016.
+
+\bibitem{EAOR_yokomori_2011}
+R.~Yokomori, H.~Siy, N.~Yoshida, M.~Noro, and K.~Inoue.
+\newblock Measuring the effects of aspect-oriented refactoring on component
+  relationships: Two case studies.
+\newblock In {\em Proceedings of the Tenth International Conference on
+  Aspect-Oriented Software Development}, AOSD '11, page 215–226, New York,
+  NY, USA, 2011. Association for Computing Machinery.
 
 \bibitem{young_using_1999}
 T.~J. Young and B.~Math.

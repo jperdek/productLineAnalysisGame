@@ -28,7 +28,7 @@
 % balík listings niekedy niektoré kľúčové slová nezvýrazňuje ak to nedostane príkazom tesne pred textom
 \newcommand{\ajset}{\lstset{emph={class,aspect,new,call,execution,set,int,advice,public,thisJoinPointStaticPart,thisEnclosingJoinPointStaticPart,@annotation,dominates},emphstyle=\bfseries}}
 
-\newcommand{\reporttitle}{Lightweight method for software product line features management} % Aspect oriented configuration of software product line features and lightweight method for their automatic, Aspect oriented configuration and derivation of software product line features
+\newcommand{\reporttitle}{Lightweight method for software product line feature management} % Aspect oriented configuration of software product line features and lightweight method for their automatic, Aspect oriented configuration and derivation of software product line features
 
 \pagestyle{myheadings}
 \markboth{\reporttitle}{Code quality, configurability and product derivation 2021/22, FIIT STU}
@@ -37,10 +37,10 @@
 
 \author{Jakub Perdek} % your name
 
-\date{In\v{s}titút informatiky, informa\v{c}ných systémov a softvérového in\v{z}inierstva\\
-      Fakulta informatiky a informa\v{c}ných technológií\\
-      Slovenská technická univerzita v Bratislave\\[6pt]
-      20. Október, 2021} % modify the date if different
+\date{In\v{s}titute of informatics, information systems and software engineering\\
+      Faculty of informatics and information technologies\\
+      Slovak technic university in Bratislava\\[6pt]
+      12. December, 2021} % modify the date if different
 
 
 
@@ -50,14 +50,15 @@
 
 \begin{abstract}
 
-Generating product variants helps with creation of products from given domain effectively and cheaper. Not only one product is derived, but also easy adaptable products from different environments, languages and according other requirements \cite{beuche_software_2006}. 
-Product derivation can be tailored to requested variability with use of aspect orientated approach, especially AspectJ language \cite{young_using_1999}, which opportunities we want to observe during fulfilling this task. We chose use of AspectJ language because it enables separate concerns such as logging, caching, pooling, but mainly is possible to exclude given aspects from execution, specific features of application based on them. Its also possible to exclude dependency on this language too \cite{laddad_aspectj_2003}.												
+Generating product variants helps with creation of products from given domain effectively and cheaper. Not only one product is derived, but also easy adaptable products from different environments, languages and according other requirements.
+ 
+Product derivation can be tailored to requested variability with use of aspect orientated approach, especially AspectJ language \cite{young_using_1999}, which opportunities we want to observe during fulfilling this task. We chose use of AspectJ language because it enables separate concerns such as logging, caching, pooling, but mainly is possible to exclude given aspects from execution, specific features of application based on them. Its also possible to exclude dependency on this language too.												
 
 We are interested in applying this language by enabling configuration of certain features in code, and generating specific software product variant with possible request of implementation independence on this used language. We evaluated benefits and qualities of aspect oriented approach applied on given implementation. Then we compared them with identified problems and benefits mentioned in varying range of reimplementations of existing software  systems such as scientific calculator or database system. Provided analysis suggest importance of domain choice during software product creation. Last but not least because of such importance we evaluated influence of given domain on its implementation.
 
 We redesigned existing Battleship game to enable managing features based on existing feature model. Many of depicted features were not implemented. The main goal is analyze possibilities of software product derivation and extent of its dependencies introduced by using AspectJ language.
 
-Next application for analysis is derivation wide range of fractals (examples of different types can be found in \cite{pelanek_programatorska_2012}) from original algorithm realized by intervention of aspects into its execution.	We assume that task of designing features for given application is determined by value of fractal appearance. For software product line creation we can request different demands for feature model such as generating all possible derivations for next aesthetic evaluation and identification of the best candidates. Because of it we evaluated potential importance of aspect oriented application for derivation of specific fractals.
+Next application for analysis is derivation wide range of fractals from original algorithm realized by intervention of aspects into its execution.	We assume that task of designing features for given application is determined by value of fractal appearance. For software product line creation we can request different demands for feature model such as generating all possible derivations for next aesthetic evaluation and identification of the best candidates. Because of it we evaluated potential importance of aspect oriented application for derivation of specific fractals.
 \end{abstract}
 
 
@@ -67,7 +68,7 @@ Creation of software products needs to create project and develop given solution
 
 Appropriate domain analysis is required to design mandatory and voluntary features of the given system to know which products should be possible to generate and if it brings value to customer and his changing requirements. For this purpose we used feature models. In reality many of these models can exist, but only few them can support these changing needs \cite{beuche_software_2006}. We think that few relations in feature model can be expressed and solved by aspect and classes almost similarly for each group of them. But sometimes features can collide and some features can't be used together. Because of mentioned problem, its necessary to think about derivation of given product and developing certain feature without colliding ones.  
 
-In our work we try to focus on applying aspect oriented language to develop program on feature model basis to serve as software product line. During our work we analyze applied ways how to do it in AspectJ language and its consequences on code quality, encapsulation, modularity benefits and dependencies which arise with using AspectJ language. We used hints and advices from papers which provided refactoring on many systems using aspect orientated languages, especially previously mentioned AspectJ.
+In our work we try to focus on applying aspect oriented language to develop program on feature model basis to serve as software product line. During our work we analyze applied ways how to do it in AspectJ language and its consequences on code quality, encapsulation, modularity benefits and dependencies which arise with using AspectJ language. Its an extension of object orientated language Java and is using join-point model \cite{hotdraw_deursen_2009}. We used hints and advices from papers which provided refactoring on many systems using aspect orientated languages, especially previously mentioned AspectJ.
 
 Provided software product line and our development techniques can be later applied on fractal construction. New shapes and patterns applied at given positions during recursion drawing of given fractal are voluntary features of given model. To perceive potential aesthetic feeling from some of them is necessary to derive such products. Having appropriate product line enabling generate full range of products for their next validation is the main requirement for this specific task.
 
@@ -131,7 +132,7 @@ Collecting statistics is another optional domain product feature. We used aspect
 
 We found that aspects well suit on configuration of settings in application. Different implementations of one type of aspect can be used to apply specific configuration which can easily support customer needs. In our product line we only replace parameters of overweighted methods with values from the configuration before calling these methods. We call these overweighted methods with more parameters to apply as much variables for configuration as is possible, but in other application it can depend on specific customer needs. 
 
-Optional configuration with computer as player which replaces normal player requires to apply aspects to efficiently separate concerns of computer player from rest of the application in case to not provide such functionality and to easily segregate such part later. We applied Cuckoo's egg pattern in this case by replacing Player class with Abstract player one. Classes for player and computer player inherited from this abstract class shared functionality which is depicted in figure \ref{playerAbstraction}. Using abstract class we can use instances of these classes to represent player and its functionality. If variable computerPlayer is set to true then certain aspect is called to prevent creation of original player instance from Player class by blocking calling constructor of this class. This aspect creates instance of ComputerPlayer class and returns it as result in around method. It serves as substitution to original Player class. Its necesary to mention that applying this functionality requires to add aspect to manage priority because of collisions with difficulty features. Managing difficulty must be applied first because of setting values for next creation of player instance. After it happens then from these given arguments one of possible player instance can be created according configuration or customer needs.   
+Optional configuration with computer as player which replaces normal player requires to apply aspects to efficiently separate concerns of computer player from rest of the application in case to not provide such functionality and to easily segregate such part later. We applied Cuckoo's egg pattern in this case by replacing Player class with Abstract player one. Classes for player and computer player inherited from this abstract class shared functionality which is depicted in figure \ref{playerAbstraction}. Using abstract class we can use instances of these classes to represent player and its functionality. If variable computerPlayer is set to true then certain aspect is called to prevent creation of original player instance from Player class by blocking calling constructor of this class. This aspect creates instance of ComputerPlayer class and returns it as result in around method. It serves as substitution to original Player class. Its necessary to mention that applying this functionality requires to add aspect to manage priority because of collisions with difficulty features. Managing difficulty must be applied first because of setting values for next creation of player instance. After it happens then from these given arguments one of possible player instance can be created according configuration or customer needs.   
 
 \begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
@@ -141,7 +142,9 @@ Optional configuration with computer as player which replaces normal player requ
 					\end{center}
 \end{figure}
 
-Po  \ref{problemsOfAspectJ}.
+Evaluation quality of code should show how powerful aspect oriented programming through AspectJ language is. We were inspired by approaches from refactoring papers which applied AspectJ in real world application and also AspectJ publications. We observed the same benefits, but also problems and complications with using AspectJ as were mentioned by these publications. The main problem of AspectJ is requirement to have certain naming conventions of methods and classes \cite{laddad_aspectj_2003}, dividing application into appropriate parts for changing their behaviour and hook methods to serve only to hang up aspect on them \cite{kastner_case_2007}. All these things point to explicit use of AspectJ language for refactoring of an application. Other issues can arise with certain types  of applications. For example in database system using its necessary to use priviledged aspects to access non public variables, but it means also violate encapsulation rules from given class \cite{kastner_case_2007}. Aspect behaviour can modify and use of these variables. Aspects improves modularity but it often requires mentioned supervision on design of final solution according with aspect otherwise solution will be less maintainable. The consequences of such a result mean susceptibility to error and complexity \cite{EAOR_yokomori_2011}. 
+ 
+  \ref{problemsOfAspectJ}.
 
 \begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
