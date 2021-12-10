@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (MiKTeX 21.2) (format=lualatex 2021.10.30)  1 DEC 2021 01:45
+This is LuaHBTeX, Version 1.13.0 (MiKTeX 21.2) (format=lualatex 2021.10.30)  10 DEC 2021 01:12
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -61,137 +61,6 @@ iKTeX/luatex-cache/generic/names/luaotfload-names.luc)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty
-Package: babel 2021/01/26 3.53 The Babel package
-
-(C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.def
-File: babel.def 2021/01/26 3.53 Babel common definitions
-
-(C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
-\bbl@readstream=\read2
-\l@afrikaans=\language2
-Package babel Info: Non-standard hyphenation setup on input line 117.
-\l@ancientgreek=\language3
-\l@armenian=\language4
-\l@assamese=\language5
-\l@basque=\language6
-\l@belarusian=\language7
-\l@bengali=\language8
-\l@bokmal=\language9
-\l@bulgarian=\language10
-\l@catalan=\language11
-\l@churchslavonic=\language12
-\l@classiclatin=\language13
-\l@coptic=\language14
-\l@croatian=\language15
-\l@czech=\language16
-\l@danish=\language17
-\l@dutch=\language18
-\l@esperanto=\language19
-\l@estonian=\language20
-\l@ethiopic=\language21
-\l@finnish=\language22
-\l@french=\language23
-\l@friulan=\language24
-\l@galician=\language25
-\l@georgian=\language26
-\l@german=\language27
-\l@greek=\language28
-\l@gujarati=\language29
-\l@hindi=\language30
-\l@hungarian=\language31
-\l@icelandic=\language32
-\l@indonesian=\language33
-\l@interlingua=\language34
-\l@irish=\language35
-\l@italian=\language36
-\l@kannada=\language37
-\l@kurmanji=\language38
-\l@latin=\language39
-\l@latvian=\language40
-\l@lithuanian=\language41
-\l@liturgicallatin=\language42
-\l@macedonian=\language43
-\l@malayalam=\language44
-\l@marathi=\language45
-\l@mongolian=\language46
-\l@mongolianlmc=\language47
-\l@monogreek=\language48
-\l@ngerman=\language49
-\l@nynorsk=\language50
-\l@occitan=\language51
-\l@oriya=\language52
-\l@pali=\language53
-\l@panjabi=\language54
-\l@piedmontese=\language55
-\l@polish=\language56
-\l@portuguese=\language57
-\l@romanian=\language58
-\l@romansh=\language59
-\l@russian=\language60
-\l@sanskrit=\language61
-\l@serbian=\language62
-\l@serbianc=\language63
-\l@slovak=\language64
-\l@slovenian=\language65
-\l@spanish=\language66
-\l@swedish=\language67
-\l@swissgerman=\language68
-\l@tamil=\language69
-\l@telugu=\language70
-\l@thai=\language71
-\l@turkish=\language72
-\l@turkmen=\language73
-\l@ukenglish=\language74
-\l@ukrainian=\language75
-\l@uppersorbian=\language76
-\l@usenglishmax=\language77
-\l@welsh=\language78
-\babelcatcodetablenum=\catcodetable12
-\bbl@pattcodes=\catcodetable13
-)
-\babel@savecnt=\count183
-\U@D=\dimen139
-\l@babelnohyphens=\language79
-
-(C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
-\bbl@attr@locale=\attribute4
-))
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/arabi/bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-("C:/Program Files/MiKTeX/tex/latex/babel-slovak/slovak.ldf"
-Language: slovak 2008/07/06 v3.1a Slovak support from the babel system
-Package babel Info: Making ^ an active character on input line 123.
-Package babel Info: Making " an active character on input line 126.
-Package babel Info: Making ' an active character on input line 129.
-\cs@wordlen=\count184
-Package babel Info: Making - an active character on input line 294.
-
-(C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/generic/hyph-utf8/loadhyph/lo
-adhyph-sk.tex UTF-8 Slovak hyphenation patterns
-(C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/generic/hyph-utf8/patterns/te
-x/hyph-sk.tex))))
-(C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/base/inputenc.sty
-Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
-
-
-Package inputenc Warning: inputenc package ignored with utf8 based engines.
-
-) (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty
-Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-2.
-
-(C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-))
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -208,10 +77,10 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 ("C:/Program Files/MiKTeX/tex/latex/float/float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count185
-\float@exts=\toks17
+\c@float@type=\count183
+\float@exts=\toks15
 \float@box=\box47
-\@float@everytoks=\toks18
+\@float@everytoks=\toks16
 \@floatcapt=\box48
 )
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
@@ -233,11 +102,11 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks19
+\pdftexcmds@toks=\toks17
 )
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
+\KV@toks@=\toks18
 )
 ("C:/Program Files/MiKTeX/tex/generic/kvsetkeys/kvsetkeys.sty"
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
@@ -260,9 +129,9 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ("C:/Program Files/MiKTeX/tex/latex/kvoptions/kvoptions.sty"
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen140
-\Hy@linkcounter=\count186
-\Hy@pagecounter=\count187
+\@linkdim=\dimen139
+\Hy@linkcounter=\count184
+\Hy@pagecounter=\count185
 
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-02-10 v7.00j Hyperref: PDFDocEncoding definition (HO)
@@ -277,7 +146,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ("C:/Program Files/MiKTeX/tex/generic/etexcmds/etexcmds.sty"
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count188
+\Hy@SavedSpaceFactor=\count186
 
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-02-10 v7.00j Hyperref: PDF Unicode definition (HO)
@@ -289,9 +158,9 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count189
+\c@Hy@tempcnt=\count187
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen141
+\XeTeXLinkMargin=\dimen140
 
 ("C:/Program Files/MiKTeX/tex/generic/bitset/bitset.sty"
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -300,9 +169,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count190
-\Field@Width=\dimen142
-\Fld@charsize=\dimen143
+\Fld@menulength=\count188
+\Field@Width=\dimen141
+\Fld@charsize=\dimen142
 Package hyperref Info: Hyper figures OFF on input line 6075.
 Package hyperref Info: Link nesting OFF on input line 6080.
 Package hyperref Info: Hyper index ON on input line 6083.
@@ -318,9 +187,9 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count191
-\c@Item=\count192
-\c@Hfootnote=\count193
+\Hy@abspage=\count189
+\c@Item=\count190
+\c@Hfootnote=\count191
 )
 Package hyperref Info: Driver (autodetected): hluatex.
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
@@ -335,8 +204,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count194
-\c@bookmark@seq@number=\count195
+\Fld@listcount=\count192
+\c@bookmark@seq@number=\count193
 ("C:/Program Files/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty"
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
@@ -366,69 +235,73 @@ Package graphics Info: Driver file: luatex.def on input line 105.
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
 File: luatex.def 2020/10/05 v1.2a Graphics/color driver for luatex
 ))
-\Gin@req@height=\dimen144
-\Gin@req@width=\dimen145
+\Gin@req@height=\dimen143
+\Gin@req@width=\dimen144
 )
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.sty
-\lst@mode=\count196
+\lst@mode=\count194
 \lst@gtempboxa=\box49
-\lst@token=\toks21
-\lst@length=\count197
-\lst@currlwidth=\dimen146
-\lst@column=\count198
-\lst@pos=\count199
-\lst@lostspace=\dimen147
-\lst@width=\dimen148
-\lst@newlines=\count266
-\lst@lineno=\count267
-\lst@maxwidth=\dimen149
+\lst@token=\toks19
+\lst@length=\count195
+\lst@currlwidth=\dimen145
+\lst@column=\count196
+\lst@pos=\count197
+\lst@lostspace=\dimen146
+\lst@width=\dimen147
+\lst@newlines=\count198
+\lst@lineno=\count199
+\lst@maxwidth=\dimen148
 
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count268
-\lst@skipnumbers=\count269
+\c@lstnumber=\count266
+\lst@skipnumbers=\count267
 \lst@framebox=\box50
 )
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
+\@indexfile=\write3
+
+\openout3 = report.idx
+Writing index file report.idx
 
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
 tex.def
 File: l3backend-luatex.def 2021-02-18 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count270
+\l__color_backend_stack_int=\count268
 \l__pdf_internal_box=\box51
 ) (./report.aux)
 \openout1 = report.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4
-7.
+6.
 
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-Package hyperref Info: Link coloring OFF on input line 47.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+Package hyperref Info: Link coloring OFF on input line 46.
 
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -439,31 +312,31 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ("C:/Program Files/MiKTeX/tex/generic/gettitlestring/gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count271
+\c@section@level=\count269
 )
-LaTeX Info: Redefining \ref on input line 47.
-LaTeX Info: Redefining \pageref on input line 47.
-LaTeX Info: Redefining \nameref on input line 47.
+LaTeX Info: Redefining \ref on input line 46.
+LaTeX Info: Redefining \pageref on input line 46.
+LaTeX Info: Redefining \nameref on input line 46.
 
 (./report.out) (./report.out)
-\@outlinefile=\write3
+\@outlinefile=\write4
 
-\openout3 = report.out
+\openout4 = report.out
 
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count272
-\scratchdimen=\dimen150
+\scratchcounter=\count270
+\scratchdimen=\dimen149
 \scratchbox=\box52
-\nofMPsegments=\count273
-\nofMParguments=\count274
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count275
-\MPscratchDim=\dimen151
-\MPnumerator=\count276
-\makeMPintoPDFobject=\count277
-\everyMPtoPDFconversion=\toks23
+\nofMPsegments=\count271
+\nofMParguments=\count272
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count273
+\MPscratchDim=\dimen150
+\MPnumerator=\count274
+\makeMPintoPDFobject=\count275
+\everyMPtoPDFconversion=\toks21
 )
 (C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
 ase.sty
@@ -471,153 +344,128 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-\c@lstlisting=\count278
+\c@lstlisting=\count276
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 50.
+(Font)              <12> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 50.
+(Font)              <8> on input line 49.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 50.
+(Font)              <6> on input line 49.
  [1
 
 {C:/Users/perde/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
+[2] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 98.
+(Font)              <10.95> on input line 101.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 98.
+(Font)              <9> on input line 101.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 98.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
-8.
-
-(C:/Users/perde/AppData/Local/Programs/MiKTeX/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3]
-<fig/battleshipFeatureModel.png, id=103, 701.019pt x 240.9pt>
+(Font)              <5> on input line 101.
+ [4]
+<fig/battleshipFeatureModel.png, id=112, 701.019pt x 240.9pt>
 File: fig/battleshipFeatureModel.png Graphic file (type png)
 <use fig/battleshipFeatureModel.png>
-Package luatex.def Info: fig/battleshipFeatureModel.png  used on input line 107
+Package luatex.def Info: fig/battleshipFeatureModel.png  used on input line 110
 .
 (luatex.def)             Requested size: 360.0pt x 123.71384pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-<fig/refactoredSchema.png, id=117, 802.79926pt x 574.5465pt>
+ [5<./fig/battleshipFeatureModel.png>]
+<fig/refactoredSchema.png, id=122, 802.79926pt x 574.5465pt>
 File: fig/refactoredSchema.png Graphic file (type png)
 <use fig/refactoredSchema.png>
-Package luatex.def Info: fig/refactoredSchema.png  used on input line 121.
+Package luatex.def Info: fig/refactoredSchema.png  used on input line 124.
 (luatex.def)             Requested size: 360.0pt x 257.6493pt.
 
-[5<./fig/battleshipFeatureModel.png>]
-Underfull \vbox (badness 2088) has occurred while \output is active []
+Underfull \vbox (badness 2012) has occurred while \output is active []
 
  [6<./fig/refactoredSchema.png>]
 <fig/playerAbstraction.png, id=133, 430.0065pt x 346.896pt>
 File: fig/playerAbstraction.png Graphic file (type png)
 <use fig/playerAbstraction.png>
-Package luatex.def Info: fig/playerAbstraction.png  used on input line 139.
+Package luatex.def Info: fig/playerAbstraction.png  used on input line 142.
 (luatex.def)             Requested size: 352.71259pt x 284.52756pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7<./fig/playerAbstraction.png>]
+ [7]
 <fig/problemsOfAspectJEN.png, id=145, 1148.49075pt x 469.15276pt>
 File: fig/problemsOfAspectJEN.png Graphic file (type png)
 <use fig/problemsOfAspectJEN.png>
-Package luatex.def Info: fig/problemsOfAspectJEN.png  used on input line 151.
+Package luatex.def Info: fig/problemsOfAspectJEN.png  used on input line 153.
 (luatex.def)             Requested size: 360.0pt x 147.05371pt.
- [8<./fig/problemsOfAspectJEN.png>]
+
+[8<./fig/playerAbstraction.png>]
 <fig/derivationRules.png, id=154, 1156.32pt x 650.43pt>
 File: fig/derivationRules.png Graphic file (type png)
 <use fig/derivationRules.png>
-Package luatex.def Info: fig/derivationRules.png  used on input line 165.
+Package luatex.def Info: fig/derivationRules.png  used on input line 167.
 (luatex.def)             Requested size: 360.0pt x 202.49466pt.
- [9<./fig/derivationRules.png>]
-<fig/expresion.png, id=166, 299.31825pt x 240.9pt>
-File: fig/expresion.png Graphic file (type png)
-<use fig/expresion.png>
-Package luatex.def Info: fig/expresion.png  used on input line 189.
-(luatex.def)             Requested size: 233.9978pt x 188.3313pt.
-
-Underfull \vbox (badness 2932) has occurred while \output is active []
-
- [10<./fig/expresion.png>]
-<fig/DerivationClassTight.png, id=175, 1243.044pt x 1455.63824pt>
-File: fig/DerivationClassTight.png Graphic file (type png)
-<use fig/DerivationClassTight.png>
-Package luatex.def Info: fig/DerivationClassTight.png  used on input line 200.
-(luatex.def)             Requested size: 360.0pt x 421.569pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-<fig/derivationProcessTight.png, id=182, 1558.02075pt x 1241.8395pt>
+ [9<./fig/problemsOfAspectJEN.png>] [10<./fig/derivationRules.png>]
+<fig/expresion.png, id=170, 299.31825pt x 240.9pt>
+File: fig/expresion.png Graphic file (type png)
+<use fig/expresion.png>
+Package luatex.def Info: fig/expresion.png  used on input line 193.
+(luatex.def)             Requested size: 233.9978pt x 188.3313pt.
+ [11<./fig/expresion.png>]
+<fig/DerivationClassTight.png, id=180, 1243.044pt x 1455.63824pt>
+File: fig/DerivationClassTight.png Graphic file (type png)
+<use fig/DerivationClassTight.png>
+Package luatex.def Info: fig/DerivationClassTight.png  used on input line 204.
+(luatex.def)             Requested size: 360.0pt x 421.569pt.
+ [12<./fig/DerivationClassTight.png>]
+<fig/derivationProcessTight.png, id=188, 1558.02075pt x 1241.8395pt>
 File: fig/derivationProcessTight.png Graphic file (type png)
 <use fig/derivationProcessTight.png>
-Package luatex.def Info: fig/derivationProcessTight.png  used on input line 211
+Package luatex.def Info: fig/derivationProcessTight.png  used on input line 215
 .
 (luatex.def)             Requested size: 360.0pt x 286.9435pt.
-
-[12<./fig/DerivationClassTight.png>]
-<fig/allCases.png, id=190, 752.21025pt x 412.54124pt>
+ [13<./fig/derivationProcessTight.png>]
+<fig/allCases.png, id=194, 752.21025pt x 412.54124pt>
 File: fig/allCases.png Graphic file (type png)
 <use fig/allCases.png>
-Package luatex.def Info: fig/allCases.png  used on input line 224.
+Package luatex.def Info: fig/allCases.png  used on input line 228.
 (luatex.def)             Requested size: 360.0pt x 197.43842pt.
- [13<./fig/derivationProcessTight.png>]
 [14<./fig/allCases.png>]
 <fig/fractalsAnklet.png, id=204, 938.3055pt x 300.52275pt>
 File: fig/fractalsAnklet.png Graphic file (type png)
 <use fig/fractalsAnklet.png>
-Package luatex.def Info: fig/fractalsAnklet.png  used on input line 239.
+Package luatex.def Info: fig/fractalsAnklet.png  used on input line 243.
 (luatex.def)             Requested size: 360.0pt x 115.30037pt.
- [15<./fig/fractalsAnklet.png>] (./report.bbl [16])
-[17
-Missing character: There is no č (U+010D) in font ec-lmri10!
-Missing character: There is no – (U+2013) in font ec-lmr10!
-] (./report.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: 3DF726BE89F967E280AB1E79ECBB6B4A;3447
-(rerunfilecheck)             After:  2320B6CA53796363A8E7AA5A75BB5FC6;3461.
+ [15<./fig/fractalsAnklet.png>] [16] [17] (./report.bbl [18]) [19] (./report.au
+x)
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: BBC8091B18A9BDA551D9F4B4AA25AAC6;3311.
 )
 
 Here is how much of LuaTeX's memory you used:
- 11439 strings out of 478540
+ 10025 strings out of 478540
  100000,552014 words of node,token memory allocated
- 480 words of node memory still in use:
-   4 hlist, 1 vlist, 1 rule, 7 glue, 3 kern, 1 glyph, 11 attribute, 50 glue_spec
-, 7 attribute_list, 1 write nodes
-   avail lists: 2:266,3:145,4:37,5:433,6:35,7:8130,8:63,9:164,10:25,11:881
- 30836 multiletter control sequences out of 65536+200000
- 56 fonts using 4986431 bytes
- 71i,8n,71p,1373b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/U
-sers/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
-b><C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb
-><C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><
-C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:
-/Users/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/U
-sers/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/User
-s/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/p
-erde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/pe
-rde/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Users/per
-de/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on report.pdf (17 pages, 1941668 bytes).
+ 427 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 3 glue, 3 kern, 1 glyph, 5 attribute, 50 glue_spec,
+ 5 attribute_list, 1 write nodes
+   avail lists: 2:307,3:188,4:29,5:415,6:28,7:7413,8:52,9:145,10:22,11:713
+ 29513 multiletter control sequences out of 65536+200000
+ 55 fonts using 5536471 bytes
+ 71i,8n,71p,1488b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
+<//?/c:/users/perde/appdata/local/programs/miktex/fonts/opentype/public/lm/lmrom
+an10-italic.otf><//?/c:/users/perde/appdata/local/programs/miktex/fonts/opentype
+/public/lm/lmmono9-regular.otf><//?/c:/users/perde/appdata/local/programs/miktex
+/fonts/opentype/public/lm/lmroman6-regular.otf><//?/c:/users/perde/appdata/local
+/programs/miktex/fonts/opentype/public/lm/lmroman8-regular.otf><//?/c:/users/per
+de/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12-bold.otf><//
+?/c:/users/perde/appdata/local/programs/miktex/fonts/opentype/public/lm/lmromans
+lant10-regular.otf><//?/c:/users/perde/appdata/local/programs/miktex/fonts/opent
+ype/public/lm/lmroman10-regular.otf><//?/c:/users/perde/appdata/local/programs/m
+iktex/fonts/opentype/public/lm/lmroman10-bold.otf><//?/c:/users/perde/appdata/lo
+cal/programs/miktex/fonts/opentype/public/lm/lmroman12-regular.otf><//?/c:/users
+/perde/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman17-regular.
+otf><C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb>
+Output written on report.pdf (19 pages, 1759599 bytes).
 
-PDF statistics: 260 PDF objects out of 1000 (max. 8388607)
- 56 named destinations out of 1000 (max. 131072)
- 113 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 300 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 131072)
+ 105 words of extra memory for PDF output out of 10000 (max. 100000000)
 

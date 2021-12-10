@@ -16,6 +16,14 @@ C.~Kastner, S.~Apel, and D.~Batory.
 \newblock In {\em 11th International Software Product Line Conference ({SPLC}
   2007)}, pages 223--232. {IEEE}, 2007.
 
+\bibitem{goos_overview_2001}
+G.~Kiczales, E.~Hilsdale, J.~Hugunin, M.~Kersten, J.~Palm, and W.~G. Griswold.
+\newblock An {Overview} of {AspectJ}.
+\newblock In G.~Goos, J.~Hartmanis, J.~van Leeuwen, and J.~L. Knudsen, editors,
+  {\em {ECOOP} 2001 — {Object}-{Oriented} {Programming}}, volume 2072, pages
+  327--354. Springer Berlin Heidelberg, Berlin, Heidelberg, 2001.
+\newblock Series Title: Lecture Notes in Computer Science.
+
 \bibitem{laddad_aspectj_2003}
 R.~Laddad.
 \newblock {\em {AspectJ} in action: practical aspect-oriented programming}.
@@ -38,6 +46,13 @@ I.~Reinhartz{-}Berger, A.~Sturm, T.~Clark, S.~Cohen, and J.~Bettin, editors.
 \newblock {\em Domain Engineering, Product Lines, Languages, and Conceptual
   Models}.
 \newblock Springer, 2013.
+
+\bibitem{voelter_product_2007}
+M.~Voelter and I.~Groher.
+\newblock Product line implementation using aspect-oriented and model-driven
+  software development.
+\newblock In {\em 11th International Software Product Line Conference ({SPLC}
+  2007)}, pages 233--242. {IEEE}, 2007.
 
 \bibitem{vranic_features_2016}
 V.~Vranic and R.~Táborský.

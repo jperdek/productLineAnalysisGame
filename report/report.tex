@@ -1,14 +1,12 @@
 % AOSD report template
 % Jakub Perdek 2020
 
-%\documentclass[11pt,english,a4paper,twoside]{article}
-\documentclass[11pt,slovak,a4paper,twoside]{article}
+\documentclass[11pt,english,a4paper,twoside]{article}
+%\documentclass[11pt,slovak,a4paper,twoside]{article}
 
-
-
-\usepackage[slovak]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+%\usepackage[slovak]{babel}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
 
 \usepackage{url}
 \usepackage[nottoc]{tocbibind}
@@ -26,20 +24,21 @@
 \newcommand{\ffe}[1]{\textsf{#1}}
 
 % balík listings niekedy niektoré kľúčové slová nezvýrazňuje ak to nedostane príkazom tesne pred textom
-\newcommand{\ajset}{\lstset{emph={class,aspect,new,call,execution,set,int,advice,public,thisJoinPointStaticPart,thisEnclosingJoinPointStaticPart,@annotation,dominates},emphstyle=\bfseries}}
+\newcommand{\ajset}{\lstset{emph={software product line, aspects, feature modeling, feature trees, AspectJ, fractals, automatic derivation},emphstyle=\bfseries}}
 
-\newcommand{\reporttitle}{Lightweight method for software product line feature management} % Aspect oriented configuration of software product line features and lightweight method for their automatic, Aspect oriented configuration and derivation of software product line features
+\newcommand{\reporttitle}{Lightweight aspect orientated method for software product line feature management} % Aspect oriented configuration of software product line features and lightweight method for their automatic, Aspect oriented configuration and derivation of software product line features
 
 \pagestyle{myheadings}
-\markboth{\reporttitle}{Code quality, configurability and product derivation 2021/22, FIIT STU}
+\markboth{Lightweight method for software product line feature management}{Code quality, configurability and product derivation 2021/22, FIIT STU}
 
+\makeindex
 \title{\reporttitle}
 
 \author{Jakub Perdek} % your name
 
 \date{In\v{s}titute of informatics, information systems and software engineering\\
       Faculty of informatics and information technologies\\
-      Slovak technic university in Bratislava\\[6pt]
+      Slovak university of technology in Bratislava\\[6pt]
       12. December, 2021} % modify the date if different
 
 
@@ -52,7 +51,7 @@
 
 Generating product variants helps with creation of products from given domain effectively and cheaper. Not only one product is derived, but also easy adaptable products from different environments, languages and according other requirements.
  
-Product derivation can be tailored to requested variability with use of aspect orientated approach, especially AspectJ language \cite{young_using_1999}, which opportunities we want to observe during fulfilling this task. We chose use of AspectJ language because it enables separate concerns such as logging, caching, pooling, but mainly is possible to exclude given aspects from execution, specific features of application based on them. Its also possible to exclude dependency on this language too.												
+Product derivation can be tailored to requested variability with use of aspect orientated approach, especially AspectJ language, which opportunities we want to observe during fulfilling this task. We chose use of AspectJ language because it enables separate concerns such as logging, caching, pooling, but mainly is possible to exclude given aspects from execution, specific features of application based on them. Its also possible to exclude dependency on this language too.												
 
 We are interested in applying this language by enabling configuration of certain features in code, and generating specific software product variant with possible request of implementation independence on this used language. We evaluated benefits and qualities of aspect oriented approach applied on given implementation. Then we compared them with identified problems and benefits mentioned in varying range of reimplementations of existing software  systems such as scientific calculator or database system. Provided analysis suggest importance of domain choice during software product creation. Last but not least because of such importance we evaluated influence of given domain on its implementation.
 
@@ -73,13 +72,6 @@ In our work we try to focus on applying aspect oriented language to develop prog
 Provided software product line and our development techniques can be later applied on fractal construction. New shapes and patterns applied at given positions during recursion drawing of given fractal are voluntary features of given model. To perceive potential aesthetic feeling from some of them is necessary to derive such products. Having appropriate product line enabling generate full range of products for their next validation is the main requirement for this specific task.
 
 
-\section{Software product line and domain analysis} \label{domainAnalysis}
-
-Variability is the main part of software product development and products are build by resolving it in a way that can build customer specific products \cite{botterweck_automating_2009}. Software products often emerge from success of market with different needs that can be provided by actual knowledge about features, then from relationships among features and relationships with software artifacts implementing these features. This known actual knowledge sources are used for systematic reuse introduces by software product line engineering \cite{reinhartz-berger_domain_2013}. Evolving products then depends on its real word applications which should provide flexible way how to apply changing needs. It can occur that given feature affects several places in models and code which can cause problems during its adaptations with other already included features. Interaction of features can cause a need to generate tailored software artifacts or software artifacts for their next modification for final application. Easier is to modify process applying change to procedure that generates these components \cite{vranic_features_2016}. 
-
-
-\section{Overview of sections} \label{content}
-
 Actual state and design of Battleship game is described in section~\ref{actualGameState}. Applied techniques for solution refactoring are presented in section~\ref{gameRefactoring}. In section~\ref{gameDerivation} we present a game derivation based on actual configuration settings and introducing annotations and expression which helps to choose content to copy into result project. 
 Section~\ref{allDerivations} describes how is possible to create all possible derivations based on feature model of given solution. We are using Battleship game again with appropriate feature model for this purpose. 
 
@@ -91,6 +83,17 @@ Work which is done in given area is described in section~\ref{recentWork}. We de
 
 Our conclusions and next work we mentioned in section~\ref{conclusions}.
 
+
+\section{Software product line and domain analysis} \label{domainAnalysis}
+
+Variability is the main part of software product development and products are build by resolving it in a way that can build customer specific products \cite{botterweck_automating_2009}. Software products often emerge from success of market with different needs that can be provided by actual knowledge about features, then from relationships among features and relationships with software artifacts implementing these features. This known actual knowledge sources are used for systematic reuse introduces by software product line engineering \cite{reinhartz-berger_domain_2013}. Evolving products then depends on its real word applications which should provide flexible way how to apply changing needs. It can occur that given feature affects several places in models and code which can cause problems during its adaptations with other already included features. Interaction of features can cause a need to generate tailored software artifacts or software artifacts for their next modification for final application. Easier is to modify process applying change to procedure that generates these components \cite{vranic_features_2016}. 
+
+Aspect-oriented model-driven software product line development makes variability implementation, management and tracing easier. This approach is using feature models to separate features and aspects to compose them on module level \cite{voelter_product_2007}. Models provides more abstract views on features to be separated and be more effectively managed in comparison with code level basis. They are even better traced according to customer requirements. These requirements then can be captured on domain level of problem space model, which consists on business requirements and end user concerns. This model should be mapped to solution space model. Implementation details are main concepts of solution models. Finally, the resulting transformations are generated by running the application \cite{voelter_product_2007}. 
+
+AspectJ provides wide range of functionality often much more then other aspect orientated languages. Its simple, powerful and has dynamic join point model \cite{goos_overview_2001}. Also it helps to tailor variability for software product derivation process \cite{young_using_1999}. Few existing projects tried this language to make parts of software more modular and tested its functionality to evaluate benefits and problems of such language. We chose this language for its benefits and to compare the quality of created software product line after refactoring solution to support given feature model.
+
+
+Main focus of our work is to provide lightweight method to derive wide range of products from implemented feature model based on using aspect oriented language AspectJ. Our aim is to separate parts of code which are necessary for requested functionality in resulting derivation. We are introducing lightweight method based on annotations to separate such parts and run or enhance them as another application without any other constraints. Derivation can be done by running application. Only modular design is required including separation of concerns where aspects really helps. Our solution should help in case to generate all types of products without much effort to develop such products on their own or evaluate them in some way. 
       
 			
 \section{Actual state and design of solution in domain application} \label{actualGameState}
@@ -142,11 +145,10 @@ Optional configuration with computer as player which replaces normal player requ
 					\end{center}
 \end{figure}
 
-Evaluation quality of code should show how powerful aspect oriented programming through AspectJ language is. We were inspired by approaches from refactoring papers which applied AspectJ in real world application and also AspectJ publications. We observed the same benefits, but also problems and complications with using AspectJ as were mentioned by these publications. The main problem of AspectJ is requirement to have certain naming conventions of methods and classes \cite{laddad_aspectj_2003}, dividing application into appropriate parts for changing their behaviour and hook methods to serve only to hang up aspect on them \cite{kastner_case_2007}. All these things point to explicit use of AspectJ language for refactoring of an application. Other issues can arise with certain types  of applications. For example in database system using its necessary to use priviledged aspects to access non public variables, but it means also violate encapsulation rules from given class \cite{kastner_case_2007}. Aspect behaviour can modify and use of these variables. Aspects improves modularity but it often requires mentioned supervision on design of final solution according with aspect otherwise solution will be less maintainable. The consequences of such a result mean susceptibility to error and complexity \cite{EAOR_yokomori_2011}. 
- 
-  \ref{problemsOfAspectJ}.
+Evaluation quality of code should show how powerful aspect oriented programming through AspectJ language is. We were inspired by approaches from refactoring papers which applied AspectJ in real world application and also AspectJ publications. We observed the same benefits, but also problems and complications with using AspectJ as were mentioned by these publications. The main problem of AspectJ is requirement to have certain naming conventions of methods and classes \cite{laddad_aspectj_2003}, dividing application into appropriate parts for changing their behaviour and hook methods to serve only to hang up aspect on them \cite{kastner_case_2007}. All these things point to explicit use of AspectJ language for refactoring of an application. Other issues can arise with certain types  of applications. For example in database system using its necessary to use priviledged aspects to access non public variables, but it means also violate encapsulation rules from given class \cite{kastner_case_2007}. Aspect behaviour can modify and use of these variables. Aspects improves modularity but it often requires mentioned supervision on design of final solution according with aspect otherwise solution will be less maintainable. The consequences of such a result mean susceptibility to error and complexity \cite{EAOR_yokomori_2011}. Identified problems on code quality which arise during implementation are shown in figure \ref{problemsOfAspectJ}.
 
-\begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
+
+\begin{figure}[t]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
 									\includegraphics[width=\linewidth]{fig/problemsOfAspectJEN.png}
 									\caption{Problems of using AspectJ language}
@@ -181,10 +183,12 @@ We specified three types of annotations:
 
 
 We mainly use the first type of annotation, but in some cases remaining two should be used. Because that solution is modular it is possible to copy all files for each feature and make derived product functional. We can say so in situation where splitting some files with many features occurring at one place can be solution, but destroying such entities and their responsibilities at all. Because of it remaining two annotations are used. Content can be managed effectively then. Because we include or exclude methods and they can import classes which in some cases will not be part of final solution its necessary to annotate them using third annotation to be included or excluded. Typical example is functionality for setting names. Two methods are annotated with second annotation. Both of them expects that variable setNames will be true if they should be included. Only second method for setting computer name has another condition in annotation that computerOpponent variable should be set to true, otherwise method will not be copied. 
- 
+
+
 For making more complex condition we enable to use AND and OR operators to specify relation between variables as is described in picture \ref{complexDerivationRule}. We use recursion to evaluate them. If no operators are used, expression is evaluated as AND statement. For AND operator all children should be true. For OR operator at least one should be true.
 
-\begin{figure}[t]  %vycentrovany obrazok grafu, vsadeny do odstavca
+
+\begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
 									\includegraphics[width=0.65\linewidth]{fig/expresion.png}
 									\caption{Complex derivation rule}
@@ -232,7 +236,7 @@ Feature models help to determine variability in solution. According them it is p
 
 Generating fractals should be interesting application in software product line design. Not only mathematical approach, but also user requirements should be applied during development. Feature models will then vary according these requirements. To evaluate resulting shapes and use their variable basis is necessary to derive such software enabling to draw fractals. All possible derivations should be created for their aesthetic evaluation to see which of them provides higher value to our perception. After this phase its possible to continue with development using certain derivations and enhance their structure.
 
-During fractals analysis we constructed many types of fractals. Some of them are created dividing certain shapes to some extent like Sierpinskeho fractal \cite{pelanek_programatorska_2012}, others extends to space using given iteration parameter. The length of line not changes during iterations for some fractals. Examples are w-curves or Krishna anklet. Other types of fractals are created using rotation of lines in space. For example Koch snowflake or hexagram. Mentioned algorithm type used to generate fractal can be enhanced by adding more shapes on user request. Not only parameters of algorithm will apply there. Lot of parameters are possible there too. For example choosing radius of circles, or different length of given shapes, width of the line, omitting certain recursion calls or drawing unfilled lines as exchange for given line. With unfilled lines its possible to manage diameter between these lines. We applied given approach drawing w-curves and results shows interesting shapes apart from typical w-curve shape using high value for this diameter. Software product lines can help in such situations to generate all types easily and only evaluate given result remains when launching application is the only one remaining requirement.
+During fractals analysis we constructed many types of fractals. Some of them are created dividing certain shapes to some extent like Sierpinskeho fractal \cite{pelanek_programatorska_2012}, others extends to space using given iteration parameter. The length of line not changes during iterations for some fractals. Examples are w-curves or Krishna anklet. Other types of fractals are created using rotation of lines in space. For example Koch snowflake or hexagram. Mentioned algorithm type used to generate fractal can be enhanced by adding more shapes on user request. Not only parameters of algorithm will apply there. Lot of parameters are possible there too. For example choosing radius of circles, or different length of given shapes, width of the line, omitting certain recursion calls or drawing unfilled lines as exchange for given line. With unfilled lines its possible to manage diameter between these lines. We applied given approach drawing w-curves and results shows interesting shapes apart from typical w-curve shape using high value for this diameter. Software product lines can help in such situations to generate all types easily and only evaluate given result remains when launching application is the only one remaining requirement. Figure showing instances of one type of fractal (anklet fractal) created using different parameters in figure \ref{ankletFractalTypes}.
 
 \begin{figure}[H]  %vycentrovany obrazok grafu, vsadeny do odstavca
 					\begin{center}
@@ -261,14 +265,20 @@ Using aspects not brings only benefits to development and refactoring of existin
 During our work we created annotations which enable selection of given classes, interfaces and aspects in final derivation. We prepared and connected these classes with configuration file to make such selection to be based on actual configuration. Changing one variable and applying derivation results in creation of different result. We let to generate all possible derivations for all implemented variable features from feature model to prove its functionality. We need only three type of basic annotations to mark classes to separate them. We also developed algorithm to evaluate expression which enables copy given files to result project. Expression consists of variables which identifies features of given feature model which serves as basis for software product line application.    
 
 
-\section{Recent work} \label{recentWork}
+\section{Related work} \label{recentWork}
 
-Kód kt
+Aspect-oriented model-driven software product line development is extensive approach to derive products according feature models. It uses open source model-driven openArchitectureWare (oAW) toolkit that is integrated into Eclipse and which provides great support for Eclipse Modeling Framework (EMF). This toolkit includes family of specialized languages such as those for model verification with using constraints (Checks language), artifact generation (Xpand language), model modifications and transformations (Xtend language). Each of these languages has common expression language and type system \cite{voelter_product_2007}. Models, especially EMF, are stored in .XMI files. Applying such tools seems to be complex. 
+
+Our method is simpler, because it needs only load configuration file for features and appropriately annotate given classes, aspects and other parts of code. For final decision if class, aspect or method should be included in final derivation, expression in annotation with given variables should be explicitly mentioned with appropriate values. This is explicit step which should be done correctly otherwise resulting solution can be dysfunctional in case of missing functionality not appended to it such as missing classes and methods. In comparison with described approach using oAW toolkit our solution is focused on development which is based on feature models explicitly. We are not doing any implicit transformation between problem space and solution space. Our solution is based on developing application according feature model in modular way and after it is necessary to appropriately annotate created classes, methods and aspects for next automatic derivation. Logic associations from feature tree are explicitly used here and usually follows simple pattern from feature model hierarchy with possibility to include other conditions for colliding features.  
 
 
 \section{Conclusions and next work} \label{conclusions}
 
-Analyzo
+In our work we introduced approach which can be used to simple derive wide range of software products as other runnable applications for their next improvements or validation. Method is simpler then other analyzed approaches but modular design and separation of concerns must be explicitly managed. Aspect oriented programming helps with these problems, but the end solution applications can be highly dependent on it. We created example using already prepared feature model to design application which can derive requested derivations according previous configuration. The derivation process is supporting previous implementation of most types of relations from this feature model. 
+
+Final application includes configuration of features, product derivation mechanism based on annotations applied by user on certain classes and methods, implementation of features according feature model and possibility to generate all given software product types.  We generated all 48 possible derivations of product example from given domain according feature model and tested their functionality. Its also possible to launch certain features directly using base project. Setting configuration values in configuration file is required for this operation.
+
+Our next focus is to apply this introduced product line to derive all possible derivation for given fractals and validate them according metrics which support aesthetic perception of given users or using other assumptions. For example about symmetry or forming patterns in space. We assume that product line should support derivation of all such features or can serve as next basis for another product line to implement contradictory features efficiently. Main benefit of provided approach is to develop and derive software products fast and effectively using aspect oriented way which should have potential in such type of application. Already provided aspect orientated solutions also can be fastly enhanced to support extraction of such features using annotations.
  
 
 \bibliographystyle{abbrv} % plain or alpha are fine, too
