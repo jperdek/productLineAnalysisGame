@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (MiKTeX 21.2) (format=lualatex 2021.10.30)  10 DEC 2021 01:12
+This is LuaHBTeX, Version 1.13.0 (MiKTeX 21.2) (format=lualatex 2021.10.30)  11 DEC 2021 02:04
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -362,39 +362,34 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 101.
  [4]
-<fig/battleshipFeatureModel.png, id=112, 701.019pt x 240.9pt>
+<fig/battleshipFeatureModel.png, id=116, 701.019pt x 240.9pt>
 File: fig/battleshipFeatureModel.png Graphic file (type png)
 <use fig/battleshipFeatureModel.png>
 Package luatex.def Info: fig/battleshipFeatureModel.png  used on input line 110
 .
 (luatex.def)             Requested size: 360.0pt x 123.71384pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [5<./fig/battleshipFeatureModel.png>]
-<fig/refactoredSchema.png, id=122, 802.79926pt x 574.5465pt>
+<fig/refactoredSchema.png, id=125, 802.79926pt x 574.5465pt>
 File: fig/refactoredSchema.png Graphic file (type png)
 <use fig/refactoredSchema.png>
 Package luatex.def Info: fig/refactoredSchema.png  used on input line 124.
 (luatex.def)             Requested size: 360.0pt x 257.6493pt.
-
-Underfull \vbox (badness 2012) has occurred while \output is active []
-
- [6<./fig/refactoredSchema.png>]
-<fig/playerAbstraction.png, id=133, 430.0065pt x 346.896pt>
+ [6<./fig/refactoredSchema.png>] [7]
+<fig/playerAbstraction.png, id=142, 430.0065pt x 346.896pt>
 File: fig/playerAbstraction.png Graphic file (type png)
 <use fig/playerAbstraction.png>
 Package luatex.def Info: fig/playerAbstraction.png  used on input line 142.
 (luatex.def)             Requested size: 352.71259pt x 284.52756pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
-<fig/problemsOfAspectJEN.png, id=145, 1148.49075pt x 469.15276pt>
+ [8<./fig/playerAbstraction.png>]
+<fig/problemsOfAspectJEN.png, id=153, 1148.49075pt x 469.15276pt>
 File: fig/problemsOfAspectJEN.png Graphic file (type png)
 <use fig/problemsOfAspectJEN.png>
 Package luatex.def Info: fig/problemsOfAspectJEN.png  used on input line 153.
 (luatex.def)             Requested size: 360.0pt x 147.05371pt.
-
-[8<./fig/playerAbstraction.png>]
-<fig/derivationRules.png, id=154, 1156.32pt x 650.43pt>
+<fig/derivationRules.png, id=155, 1156.32pt x 650.43pt>
 File: fig/derivationRules.png Graphic file (type png)
 <use fig/derivationRules.png>
 Package luatex.def Info: fig/derivationRules.png  used on input line 167.
@@ -403,50 +398,59 @@ Package luatex.def Info: fig/derivationRules.png  used on input line 167.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9<./fig/problemsOfAspectJEN.png>] [10<./fig/derivationRules.png>]
-<fig/expresion.png, id=170, 299.31825pt x 240.9pt>
+<fig/expresion.png, id=173, 299.31825pt x 240.9pt>
 File: fig/expresion.png Graphic file (type png)
 <use fig/expresion.png>
 Package luatex.def Info: fig/expresion.png  used on input line 193.
 (luatex.def)             Requested size: 233.9978pt x 188.3313pt.
  [11<./fig/expresion.png>]
-<fig/DerivationClassTight.png, id=180, 1243.044pt x 1455.63824pt>
+<fig/DerivationClassTight.png, id=183, 1243.044pt x 1455.63824pt>
 File: fig/DerivationClassTight.png Graphic file (type png)
 <use fig/DerivationClassTight.png>
 Package luatex.def Info: fig/DerivationClassTight.png  used on input line 204.
 (luatex.def)             Requested size: 360.0pt x 421.569pt.
  [12<./fig/DerivationClassTight.png>]
-<fig/derivationProcessTight.png, id=188, 1558.02075pt x 1241.8395pt>
+<fig/derivationProcessTight.png, id=191, 1558.02075pt x 1241.8395pt>
 File: fig/derivationProcessTight.png Graphic file (type png)
 <use fig/derivationProcessTight.png>
 Package luatex.def Info: fig/derivationProcessTight.png  used on input line 215
 .
 (luatex.def)             Requested size: 360.0pt x 286.9435pt.
  [13<./fig/derivationProcessTight.png>]
-<fig/allCases.png, id=194, 752.21025pt x 412.54124pt>
+<fig/allCases.png, id=197, 752.21025pt x 412.54124pt>
 File: fig/allCases.png Graphic file (type png)
 <use fig/allCases.png>
 Package luatex.def Info: fig/allCases.png  used on input line 228.
 (luatex.def)             Requested size: 360.0pt x 197.43842pt.
 [14<./fig/allCases.png>]
-<fig/fractalsAnklet.png, id=204, 938.3055pt x 300.52275pt>
+<fig/fractalsAnklet.png, id=207, 938.3055pt x 300.52275pt>
 File: fig/fractalsAnklet.png Graphic file (type png)
 <use fig/fractalsAnklet.png>
 Package luatex.def Info: fig/fractalsAnklet.png  used on input line 243.
 (luatex.def)             Requested size: 360.0pt x 115.30037pt.
  [15<./fig/fractalsAnklet.png>] [16] [17] (./report.bbl [18]) [19] (./report.au
 x)
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: BBC8091B18A9BDA551D9F4B4AA25AAC6;3311.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `report.out':
+(rerunfilecheck)             Before: E32A0382E284FD66015D895F48F74AFF;3318
+(rerunfilecheck)             After:  F703BA3953D6288CA2A11FEA523A7B97;3283.
 )
 
 Here is how much of LuaTeX's memory you used:
- 10025 strings out of 478540
+ 10027 strings out of 478540
  100000,552014 words of node,token memory allocated
  427 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 3 glue, 3 kern, 1 glyph, 5 attribute, 50 glue_spec,
  5 attribute_list, 1 write nodes
-   avail lists: 2:307,3:188,4:29,5:415,6:28,7:7413,8:52,9:145,10:22,11:713
- 29513 multiletter control sequences out of 65536+200000
+   avail lists: 2:317,3:197,4:29,5:450,6:28,7:7469,8:53,9:147,10:22,11:713
+ 29514 multiletter control sequences out of 65536+200000
  55 fonts using 5536471 bytes
  71i,8n,71p,1488b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
 <//?/c:/users/perde/appdata/local/programs/miktex/fonts/opentype/public/lm/lmrom
@@ -463,9 +467,9 @@ cal/programs/miktex/fonts/opentype/public/lm/lmroman12-regular.otf><//?/c:/users
 /perde/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman17-regular.
 otf><C:/Users/perde/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmmi10.pfb>
-Output written on report.pdf (19 pages, 1759599 bytes).
+Output written on report.pdf (19 pages, 1761007 bytes).
 
-PDF statistics: 300 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 131072)
+PDF statistics: 305 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 131072)
  105 words of extra memory for PDF output out of 10000 (max. 100000000)
 

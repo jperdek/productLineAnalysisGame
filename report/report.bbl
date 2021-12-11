@@ -10,6 +10,13 @@ G.~Botterweck, K.~Lee, and S.~Thiel.
 \newblock Automating product derivation in software product line engineering.
 \newblock page~6, 2009.
 
+\bibitem{figueiredo_evolving_2008}
+E.~Figueiredo, N.~Cacho, C.~Sant'Anna, M.~Monteiro, U.~Kulesza, A.~Garcia,
+  S.~Soares, F.~Ferrari, S.~Khan, F.~Castor, and F.~Dantas.
+\newblock Evolving software product lines with aspects: An empirical study on
+  design stability.
+\newblock pages 261--270, 01 2008.
+
 \bibitem{kastner_case_2007}
 C.~Kastner, S.~Apel, and D.~Batory.
 \newblock A case study implementing features using {AspectJ}.
