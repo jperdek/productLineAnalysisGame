@@ -4,13 +4,14 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Iterator;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import derivator.features.SingleFeature;
 
 
 public class ConfigFilePersistance {
@@ -49,7 +50,7 @@ public class ConfigFilePersistance {
 			} else if (processedObject instanceof JSONObject) {			
 				applyConfiguration((JSONObject) processedObject, configurationVariableManager);
 			} else {
-				String variable = configurationVariableManager.getVariable(key);
+				String variable =((SingleFeature) configurationVariableManager.getVariable(key)).convertToString();
 				if(variable != null) {
 					if(variable == "true" || variable == "false") { 
 						builtInConfig.put(key, (boolean) Boolean.parseBoolean(variable));

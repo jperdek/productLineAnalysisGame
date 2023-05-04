@@ -3,6 +3,7 @@ package derivator.generator;
 import derivator.ConfigFilePersistance;
 import derivator.ConfigurationVariableManager;
 import derivator.DerivationManager;
+import derivator.features.SingleFeature;
 
 import java.util.Iterator;
 import java.util.List;
@@ -53,7 +54,7 @@ public class GeneratorManager {
 			GSample gsample[], ConfigSample configSample) {
 		ConfigurationVariableManager configurationVariableManager = new ConfigurationVariableManager();
 		for(int i = 0; i < gsample.length; i++) {
-			configurationVariableManager.addVariable(gsample[i].getVariableName(), configSample.getSample(i).toString());
+			configurationVariableManager.addVariable(gsample[i].getVariableName(), new SingleFeature(configSample.getSample(i).toString(), true));
 		}
 		
 		return configurationVariableManager;

@@ -5,6 +5,8 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import org.json.simple.parser.ParseException;
 
+import derivator.features.IncorrectFeaturesEntryUsageException;
+
 public class DerivationAnnotationManager {
 
 	private ClassAnnotation classAnnotation;
@@ -17,7 +19,7 @@ public class DerivationAnnotationManager {
 		this.importAnnotation = new ImportAnnotation(derivationVariableProcessor);
 	}
 	
-	public boolean searchForAnnotation(BufferedReader bufferedReader, BufferedWriter bufferedWriter) throws IncorrectAnnotationUsageException {
+	public boolean searchForAnnotation(BufferedReader bufferedReader, BufferedWriter bufferedWriter) throws IncorrectAnnotationUsageException, IncorrectFeaturesEntryUsageException {
 		boolean shouldRemove = true;
 		boolean resultRemove = true;
 		StringBuilder stringBuilder = new StringBuilder();
@@ -55,7 +57,7 @@ public class DerivationAnnotationManager {
 	}
 	
 	private boolean chooseAndAnnotationMethod(BufferedReader bufferedReader, char potentialAnnotationMark,
-			BufferedWriter bufferedWriter, StringBuilder stringBuilder) throws ParseException, IOException, IncorrectAnnotationUsageException {
+			BufferedWriter bufferedWriter, StringBuilder stringBuilder) throws ParseException, IOException, IncorrectAnnotationUsageException, IncorrectFeaturesEntryUsageException {
 		boolean result;
 		switch(potentialAnnotationMark) {
 			case '@':

@@ -1,23 +1,23 @@
 package derivator;
 
 import java.util.Map;
+import derivator.features.Features;
 import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class ConfigurationVariableManager {
 
-	private Map<String, String> configVariables;
+private Map<String, Features> configVariables;
 	
 	public ConfigurationVariableManager() {
-		configVariables = new HashMap<String, String>();
+		configVariables = new HashMap<String, Features>();
 	}
 	
-	public void addVariable(String variableName, String value) {
+	public void addVariable(String variableName, Features value) {
 		configVariables.put(variableName, value);
 	}
 	
-	public String getVariable(String variableName) {
+	public Features getVariable(String variableName) {
 		return configVariables.get(variableName);
 	}
 	
@@ -28,5 +28,13 @@ public class ConfigurationVariableManager {
 			results[i] = (String) keys[i];
 		}
 		return results;
+	}
+	
+	public void print() {
+		Object[] keys = configVariables.keySet().toArray();
+		String[] results = new String[keys.length];
+		for(int i = 0; i < keys.length; i++) {
+			System.out.println(keys[i]);
+		}
 	}
 }

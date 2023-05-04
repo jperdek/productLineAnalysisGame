@@ -7,6 +7,8 @@ import java.nio.file.Path;
 
 import org.json.simple.parser.ParseException;
 
+import derivator.features.IncorrectFeaturesEntryUsageException;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.FileWriter;
@@ -21,7 +23,7 @@ public class FileCopy {
 		this.derivationAnnotationManager = derivationAnnotationManager;
 	}
 	
-	public void processFile(String inputPath, String outputPath) throws IOException {
+	public void processFile(String inputPath, String outputPath) throws IOException, IncorrectFeaturesEntryUsageException {
 		boolean shouldRemove = true;
 		FileReader fr = null;
 		BufferedReader br = null;
