@@ -32,7 +32,7 @@ Derive product/products with only necessary assets according to the provided con
 
 ### Single product derivation  
 
-- Configuring the following values in the src/derivator/DerivatorBaseConfig.java file:  
+- Configure the following values in the src/derivator/DerivatorBaseConfig.java file:  
   - Set the product name by changing the value of SINGLE_DERIVATION_NAME  
   - Set the folder where derivation should be stored by changing the value of NEW_DERIVATIONS_FOLDER_PATH  
   - Set the path to the application configuration by changing the value RESOURCES_CONFIG_PATH (already set by default as resources/battleshipConfig.json)   
@@ -53,7 +53,7 @@ Derive product/products with only necessary assets according to the provided con
 
 ### All possible product derivations
 
-- Configuring the following values in the src/derivator/DerivatorBaseConfig.java file:  
+- Configure the following values in the src/derivator/DerivatorBaseConfig.java file:  
   - Set the folder where all derivations should be stored by changing the value of NEW_DERIVATIONS_FOLDER_PATH  
   - Set the path to the application configuration by changing the value RESOURCES_CONFIG_PATH (already set by default as resources/battleshipConfig.json)  
   - Set the path to the file with configuration of variable boundaries by changing the value VARIABLE_RESTRICTIONS_FILE_PATH (already set by default as resources/variableRestrictions.json") 
