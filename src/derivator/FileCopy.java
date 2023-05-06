@@ -1,19 +1,15 @@
 package derivator;
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
-
-import org.json.simple.parser.ParseException;
-
 import derivator.features.IncorrectFeaturesEntryUsageException;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
+
 
 public class FileCopy {
 

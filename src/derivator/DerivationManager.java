@@ -84,35 +84,33 @@ public class DerivationManager {
 	public static ConfigurationVariableManager createConfigurableVariableManager() {
 		ConfigurationVariableManager configurationVariableManager = new ConfigurationVariableManager();
 
-		configurationVariableManager.addVariable("playerNames", new SingleFeature(Boolean.toString(Configuration.playerNames), true));
-		configurationVariableManager.addVariable("computerOpponent", new SingleFeature(Boolean.toString(Configuration.computerOpponent), true));
-		configurationVariableManager.addVariable("statistics", new SingleFeature(Boolean.toString(Configuration.statistics), true));
-		configurationVariableManager.addVariable("challenge", new SingleFeature(Boolean.toString(Configuration.challenge), true));
-		configurationVariableManager.addVariable("difficulty", new SingleFeature(Configuration.difficulty, true));
+		configurationVariableManager.addVariable("playerNames", new SingleFeature(Boolean.toString(Configuration.playerNames), Configuration.playerNames));
+		configurationVariableManager.addVariable("computerOpponent", new SingleFeature(Boolean.toString(Configuration.computerOpponent), Configuration.computerOpponent));
+		configurationVariableManager.addVariable("statistics", new SingleFeature(Boolean.toString(Configuration.statistics), Configuration.statistics));
+		configurationVariableManager.addVariable("challenge", new SingleFeature(Boolean.toString(Configuration.challenge), Configuration.challenge));
+		configurationVariableManager.addVariable("difficulty", new SingleFeature(Configuration.difficulty, Configuration.difficulty));
 		
 		return configurationVariableManager;
 	}
 	
-	//DEPRECATED
+	@Deprecated
 	public static void test() throws IncorrectFeaturesEntryUsageException {
-		String newProjectName = "NewProject";
-		ConfigurationLoader configurationLoader = new ConfigurationLoader("resources/battleshipConfig.json");
+		// ConfigurationLoader configurationLoader = new ConfigurationLoader(DerivationBaseConfig.RESOURCES_CONFIG_PATH);
 		DerivationManager derivationManager = new DerivationManager();
 		ProjectCopier.copyExistingProject(
 				DerivationBaseConfig.BASE_PROJECT_SPL_PATH + "\\projectSkeleton", 
-				DerivationBaseConfig.NEW_DERIVATIONS_FOLDER_PATH + newProjectName + "/");
+				DerivationBaseConfig.NEW_DERIVATIONS_FOLDER_PATH + DerivationBaseConfig.SINGLE_DERIVATION_NAME + "/");
 		derivationManager.processDerivation(DerivationBaseConfig.BASE_PROJECT_SPL_PATH + "/src",
 				"file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Generated/src/");
 	}
 	
 	public static void test1() throws IncorrectFeaturesEntryUsageException {
-		String newProjectName = "NewProject";
-		ConfigurationLoader configurationLoader = new ConfigurationLoader("resources/battleshipConfig.json");
+		ConfigurationLoader configurationLoader = new ConfigurationLoader(DerivationBaseConfig.RESOURCES_CONFIG_PATH);
 		DerivationManager derivationManager = new DerivationManager();
 		DerivationManager.createSoftwareDerivation(
 				DerivationBaseConfig.BASE_PROJECT_SPL_PATH,
 				DerivationBaseConfig.NEW_DERIVATIONS_FOLDER_PATH, 
-				newProjectName, derivationManager);
+				DerivationBaseConfig.SINGLE_DERIVATION_NAME, derivationManager);
 	}
 	
 	public static void createSoftwareDerivation(String inputPath, String outputPath, 

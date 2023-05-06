@@ -4,8 +4,10 @@ import java.io.IOException;
 import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.Iterator;
 import java.util.stream.Stream;
+
 
 public class ProjectCopier {
 	public static void copyExistingProject(String pathToProjectTree, String pathToNewProject) {
@@ -28,12 +30,8 @@ public class ProjectCopier {
 					}
 				} else {
 					Path outputDirectoryPath = Path.of(URI.create(outputDirectoryOrFileString));
-					//String baseInputPath = pathToProjectTree.substring(pathToProjectTree.indexOf("C:/"));
-					//String baseOutputPath = pathToNewProject.substring(pathToProjectTree.indexOf("C:/"));
-					try {
-						Files.copy(actualPath, outputDirectoryPath);
-					} catch(Exception e) {
-					}
+		
+					Files.copy(actualPath, outputDirectoryPath, StandardCopyOption.REPLACE_EXISTING);
 				}
 			}
 		} catch (IOException e) {

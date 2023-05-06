@@ -71,7 +71,7 @@ public class DerivationVariableProcessor {
         	
         		//this.configurationVariableManager.print();
         		//System.out.println(keys[i]);
-        		if(!featureValue.compare(this.applicationType, configValue)) {
+        		if(!featureValue.compare(key_i, configValue)) {
         			return false;
         		}	
         	}
@@ -107,7 +107,7 @@ public class DerivationVariableProcessor {
         	
         		//this.configurationVariableManager.print();
         		//System.out.println(keys[i]);
-        		if(featureValue.compare(this.applicationType, configValue)) {
+        		if(featureValue.compare(key_i, configValue)) {
         			return true;
         		}
         	}

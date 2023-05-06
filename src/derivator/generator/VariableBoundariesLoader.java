@@ -9,8 +9,6 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import derivator.ConfigurationVariableManager;
-import java.util.List;
-import java.util.ArrayList;
 import java.util.Iterator;
 
 public class VariableBoundariesLoader {
