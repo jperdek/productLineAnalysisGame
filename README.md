@@ -69,7 +69,9 @@ Derive product/products with only necessary assets according to the provided con
 - Run the AspectJ program located in the src/battleship/Battleship.java file of the derived application  
 ![Running the derived application](/images/runningTheApp.bmp)  
 
-![All derivations](/images/allCases.png) 
+
+The number of all derivations:  
+![All derivations](/images/allCases.png)   
 
 
 
@@ -78,15 +80,15 @@ Derive product/products with only necessary assets according to the provided con
 ### Derivation process diagrams  
 
 Structure of the derivator:  
-![Class diagram](/images/generatorClassTight.png) 
+![Class diagram](/images/generatorClassTight.png)  
 
 Derivation process:  
-![Sequence diagram](/images/derivationProcessTight.png) 
+![Sequence diagram](/images/derivationProcessTight.png)   
 
 
 ### Solution diagrams 
 Feature model:   
-![Mapped variables into the feature model](/images/derivationRules.png)
+![Mapped variables into the feature model](/images/derivationRules.png)  
 
 Refactored solution - class diagram:  
-![Class diagram](/images/refactoredSchema.png)
+![Class diagram](/images/refactoredSchema.png)  
