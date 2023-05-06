@@ -6,12 +6,14 @@ import java.io.IOException;
 
 import org.json.simple.parser.ParseException;
 
+import derivator.features.IncorrectFeaturesEntryUsageException;
+
 public abstract class DerivationAnnotation {
 	public abstract boolean process(BufferedReader bufferedReader, BufferedWriter bufferedWriter,
-			StringBuilder stringBuilder) throws ParseException, IOException, IncorrectAnnotationUsageException;
+			StringBuilder stringBuilder) throws ParseException, IOException, IncorrectAnnotationUsageException, IncorrectFeaturesEntryUsageException;
 
 	public abstract boolean process(BufferedReader bufferedReader, StringBuilder stringBuilder, 
-			StringBuilder content) throws ParseException, IOException, IncorrectAnnotationUsageException;
+			StringBuilder content) throws ParseException, IOException, IncorrectAnnotationUsageException, IncorrectFeaturesEntryUsageException;
 	
 	protected abstract boolean checkAnnotation(String stringToCheck);
 	

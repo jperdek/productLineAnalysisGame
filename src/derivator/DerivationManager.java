@@ -9,6 +9,8 @@ import java.util.stream.Stream;
 
 import configurationManagement.Configuration;
 import configurationManagement.ConfigurationLoader;
+import derivator.features.IncorrectFeaturesEntryUsageException;
+import derivator.features.SingleFeature;
 
 
 public class DerivationManager {
@@ -45,7 +47,7 @@ public class DerivationManager {
 		return this.fileCopy;
 	}
 	
-	public void processDerivation(String inputPath, String outputPath) {
+	public void processDerivation(String inputPath, String outputPath) throws IncorrectFeaturesEntryUsageException {
 		Stream<Path> s = null;
 		try {
 			Path inputPath1 = Path.of(URI.create(inputPath));
@@ -59,10 +61,13 @@ public class DerivationManager {
 				String outputDirectoryOrFileString = outputPath + newDirectoryOrFileString;
 				if(Files.isDirectory(actualPath)) {
 					Path outputDirectoryPath = Path.of(URI.create(outputDirectoryOrFileString));
+				try {
 					Files.createDirectory(outputDirectoryPath);
+				} catch(Exception e) {
+				}
 				} else {
-					String baseInputPath = inputPath.substring(inputPath.indexOf("C:/"));
-					String baseOutputPath = outputPath.substring(inputPath.indexOf("C:/"));
+					String baseInputPath = inputPath.substring(inputPath.indexOf(DerivationBaseConfig.USED_FILE_SYSTEM));
+					String baseOutputPath = outputPath.substring(inputPath.indexOf(DerivationBaseConfig.USED_FILE_SYSTEM));
 					this.fileCopy.processFile(baseInputPath + "/" + newDirectoryOrFileString,
 							baseOutputPath + "/" + newDirectoryOrFileString);
 				}
@@ -79,37 +84,37 @@ public class DerivationManager {
 	public static ConfigurationVariableManager createConfigurableVariableManager() {
 		ConfigurationVariableManager configurationVariableManager = new ConfigurationVariableManager();
 
-		configurationVariableManager.addVariable("playerNames", Boolean.toString(Configuration.playerNames));
-		configurationVariableManager.addVariable("computerOpponent", Boolean.toString(Configuration.computerOpponent));
-		configurationVariableManager.addVariable("statistics", Boolean.toString(Configuration.statistics));
-		configurationVariableManager.addVariable("challenge", Boolean.toString(Configuration.challenge));
-		configurationVariableManager.addVariable("difficulty", Configuration.difficulty);
+		configurationVariableManager.addVariable("playerNames", new SingleFeature(Boolean.toString(Configuration.playerNames), Configuration.playerNames));
+		configurationVariableManager.addVariable("computerOpponent", new SingleFeature(Boolean.toString(Configuration.computerOpponent), Configuration.computerOpponent));
+		configurationVariableManager.addVariable("statistics", new SingleFeature(Boolean.toString(Configuration.statistics), Configuration.statistics));
+		configurationVariableManager.addVariable("challenge", new SingleFeature(Boolean.toString(Configuration.challenge), Configuration.challenge));
+		configurationVariableManager.addVariable("difficulty", new SingleFeature(Configuration.difficulty, Configuration.difficulty));
 		
 		return configurationVariableManager;
 	}
 	
-	public static void test() {
-		String newProjectName = "NewProject";
-		ConfigurationLoader configurationLoader = new ConfigurationLoader("resources/battleshipConfig.json");
+	@Deprecated
+	public static void test() throws IncorrectFeaturesEntryUsageException {
+		// ConfigurationLoader configurationLoader = new ConfigurationLoader(DerivationBaseConfig.RESOURCES_CONFIG_PATH);
 		DerivationManager derivationManager = new DerivationManager();
-		ProjectCopier.copyExistingProject("file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Java-Battleship/projectSkeleton", 
-				"file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/" + newProjectName + "/");
-		derivationManager.processDerivation("file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Java-Battleship/src",
+		ProjectCopier.copyExistingProject(
+				DerivationBaseConfig.BASE_PROJECT_SPL_PATH + "\\projectSkeleton", 
+				DerivationBaseConfig.NEW_DERIVATIONS_FOLDER_PATH + DerivationBaseConfig.SINGLE_DERIVATION_NAME + "/");
+		derivationManager.processDerivation(DerivationBaseConfig.BASE_PROJECT_SPL_PATH + "/src",
 				"file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Generated/src/");
 	}
 	
-	public static void test1() {
-		String newProjectName = "NewProject";
-		ConfigurationLoader configurationLoader = new ConfigurationLoader("resources/battleshipConfig.json");
+	public static void test1() throws IncorrectFeaturesEntryUsageException {
+		ConfigurationLoader configurationLoader = new ConfigurationLoader(DerivationBaseConfig.RESOURCES_CONFIG_PATH);
 		DerivationManager derivationManager = new DerivationManager();
 		DerivationManager.createSoftwareDerivation(
-				"file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/Java-Battleship/",
-				"file:///C://Users/perde/OneDrive/Desktop/tutorials/aspekty/allAspectApp/", 
-				newProjectName, derivationManager);
+				DerivationBaseConfig.BASE_PROJECT_SPL_PATH,
+				DerivationBaseConfig.NEW_DERIVATIONS_FOLDER_PATH, 
+				DerivationBaseConfig.SINGLE_DERIVATION_NAME, derivationManager);
 	}
 	
 	public static void createSoftwareDerivation(String inputPath, String outputPath, 
-			String projectName, DerivationManager derivationManager) {
+			String projectName, DerivationManager derivationManager) throws IncorrectFeaturesEntryUsageException {
 		String baseProjectSkeletonPath = inputPath + "projectSkeleton";
 		String baseProjectSrcPath = inputPath + "src";
 		String newProjectName = outputPath + projectName + "/";
@@ -118,7 +123,7 @@ public class DerivationManager {
 		derivationManager.processDerivation(baseProjectSrcPath, targetProjectSrcPath);
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IncorrectFeaturesEntryUsageException {
 		DerivationManager.test1();
 	}
 }

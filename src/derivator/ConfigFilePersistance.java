@@ -4,13 +4,15 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Iterator;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import derivator.features.Features;
+import derivator.features.SingleFeature;
 
 
 public class ConfigFilePersistance {
@@ -24,7 +26,7 @@ public class ConfigFilePersistance {
 		this.loadJSONConfig(inputConfigPath);
 		System.out.println("Applying configuration for it:");
 		this.applyConfiguration(this.configurationObject, configurationVariableManager);
-		System.out.println("Saving config");
+		System.out.println("Saving config to:" + outputConfigPath);
 		this.writeJSONConfig(outputConfigPath, this.configurationObject);
 	}
 	
@@ -49,18 +51,21 @@ public class ConfigFilePersistance {
 			} else if (processedObject instanceof JSONObject) {			
 				applyConfiguration((JSONObject) processedObject, configurationVariableManager);
 			} else {
-				String variable = configurationVariableManager.getVariable(key);
-				if(variable != null) {
-					if(variable == "true" || variable == "false") { 
-						builtInConfig.put(key, (boolean) Boolean.parseBoolean(variable));
-					} else if(variable.matches("-?\\d+")) {
-						builtInConfig.put(key, (int) Integer.parseInt(variable));
-					} else if(variable.matches("^([+-]?\\d*\\.?\\d*)$")) {
-						builtInConfig.put(key, (float) Float.parseFloat(variable));
-					} else {
-						builtInConfig.put(key, variable);
+				Features feature = configurationVariableManager.getVariable(key);
+				if (feature != null) {
+					String variable =((SingleFeature) feature).convertToString();
+					if(variable != null) {
+						if(variable.equals("true") || variable.equals("false")) { 
+							builtInConfig.put(key, (boolean) Boolean.parseBoolean(variable));
+						} else if(variable.matches("-?\\d+")) {
+							builtInConfig.put(key, (int) Integer.parseInt(variable));
+						} else if(variable.matches("^([+-]?\\d*\\.?\\d*)$")) {
+							builtInConfig.put(key, (float) Float.parseFloat(variable));
+						} else {
+							builtInConfig.put(key, variable);
+						}
+						System.out.println("Set " + key);
 					}
-					System.out.println("Set " + key);
 				}
 			}
 		}

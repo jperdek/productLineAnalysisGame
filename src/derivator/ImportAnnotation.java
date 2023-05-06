@@ -6,6 +6,8 @@ import java.io.IOException;
 
 import org.json.simple.parser.ParseException;
 
+import derivator.features.IncorrectFeaturesEntryUsageException;
+
 public class ImportAnnotation extends DerivationAnnotation  {
 	private DerivationVariableProcessor derivationVariableProcessor;
 	
@@ -18,7 +20,7 @@ public class ImportAnnotation extends DerivationAnnotation  {
 	}
 	
 	public boolean process(BufferedReader bufferedReader, BufferedWriter bufferedWriter, 
-			StringBuilder stringBuilder) throws ParseException, IOException, IncorrectAnnotationUsageException {
+			StringBuilder stringBuilder) throws ParseException, IOException, IncorrectAnnotationUsageException, IncorrectFeaturesEntryUsageException {
 		String descriptionJSON = (String) bufferedReader.readLine();
 
 		boolean shouldParse = this.derivationVariableProcessor.shouldProcessDerivationVariablesANDRecursive(
