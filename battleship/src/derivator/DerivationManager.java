@@ -113,6 +113,9 @@ public class DerivationManager {
 				DerivationBaseConfig.BASE_PROJECT_SPL_PATH,
 				DerivationBaseConfig.NEW_DERIVATIONS_FOLDER_PATH, 
 				DerivationBaseConfig.SINGLE_DERIVATION_NAME, derivationManager);
+		Files.copy(Path.of(URI.create(DerivationBaseConfig.BASE_PROJECT_SPL_PATH + DerivationBaseConfig.RESOURCES_CONFIG_PATH)),
+				Path.of(URI.create(DerivationBaseConfig.NEW_DERIVATIONS_FOLDER_PATH + DerivationBaseConfig.SINGLE_DERIVATION_NAME + 
+				"/" + DerivationBaseConfig.RESOURCES_CONFIG_PATH)), StandardCopyOption.REPLACE_EXISTING);
 	}
 	
 	public static void createSoftwareDerivation(String inputPath, String outputPath, 
@@ -122,9 +125,6 @@ public class DerivationManager {
 		String newProjectName = outputPath + projectName + "/";
 		String targetProjectSrcPath = newProjectName + "src/";
 		ProjectCopier.copyExistingProject(baseProjectSkeletonPath, newProjectName);
-		Files.copy(Path.of(URI.create(inputPath + DerivationBaseConfig.RESOURCES_CONFIG_PATH)),
-				Path.of(URI.create(newProjectName + DerivationBaseConfig.RESOURCES_CONFIG_PATH)), 
-				StandardCopyOption.REPLACE_EXISTING);
 		derivationManager.processDerivation(baseProjectSrcPath, targetProjectSrcPath);
 	}
 	
