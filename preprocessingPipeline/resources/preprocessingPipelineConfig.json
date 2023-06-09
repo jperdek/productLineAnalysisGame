@@ -1,0 +1,11 @@
+{
+    "dataEntity": "tweet",
+    "dataConversion": "python",
+	"cleaning": {
+		"emojiCleaner": true,
+		"lowerCasting": true,
+		"punctuationCleaner": true
+	}
+    "standardQuotes": true,
+    "dataFiltering": false
+}

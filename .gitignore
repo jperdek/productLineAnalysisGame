@@ -1,1 +1,5 @@
-/bin/
+/lightweight/bin/*
+/lightweight/.settings
+/preprocessingPipeline/sources/datasets/*
+/preprocessingPipeline/bin/*
+/preprocessingPipeline/.settings
