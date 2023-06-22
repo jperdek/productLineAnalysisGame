@@ -1,0 +1,80 @@
+{
+    "difficultyLevels": {
+        "easy": {
+            "player": {
+                "areaSize": {
+                    "width": 5,
+                    "height": 5
+                },
+                "playerShips": [
+                    3,
+                    2
+                ]
+            },
+            "opponent": {
+                "areaSize": {
+                    "width": 5,
+                    "height": 5
+                },
+                "playerShips": [
+                    3
+                ],
+                "computerStrategy": "RANDOM"
+            }
+        },
+        "medium": {
+            "player": {
+                "areaSize": {
+                    "width": 5,
+                    "height": 5
+                },
+                "playerShips": [
+                    3,
+                    2
+                ]
+            },
+            "opponent": {
+                "areaSize": {
+                    "width": 8,
+                    "height": 8
+                },
+                "playerShips": [
+                    3,
+                    5
+                ],
+                "computerStrategy": "RANDOM"
+            }
+        },
+        "hard": {
+            "player": {
+                "areaSize": {
+                    "width": 6,
+                    "height": 6
+                },
+                "playerShips": [
+                    3,
+                    2,
+                    3
+                ]
+            },
+            "opponent": {
+                "areaSize": {
+                    "width": 10,
+                    "height": 10
+                },
+                "playerShips": [
+                    3,
+                    2,
+                    5,
+                    3
+                ],
+                "computerStrategy": "RANDOM"
+            }
+        }
+    },
+    "difficulty": "easy",
+    "playerNames": true,
+    "computerOpponent": true,
+    "statistics": false,
+    "challenge": false
+}

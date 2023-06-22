@@ -1,0 +1,23 @@
+{
+    "playerNames": {
+        "type": "boolean",
+        "numberCases": 2
+    },
+    "computerOpponent": {
+        "type": "boolean",
+        "numberCases": 2
+    },
+    "statistics": {
+        "type": "boolean",
+        "numberCases": 2
+    },
+    "challenge": {
+        "type": "boolean",
+        "numberCases": 2
+    },
+    "difficulty": {
+        "type": "String",
+        "numberCases": 3,
+        "cases": ["easy", "medium", "hard"]
+    }
+}

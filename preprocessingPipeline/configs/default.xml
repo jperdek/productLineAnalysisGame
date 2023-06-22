@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature name="PreprocessingPipeline"/>
+	<feature name="Data loading"/>
+	<feature name="Data Cleaning"/>
+	<feature name="Convert to lowecase"/>
+	<feature name="Remove punctuation"/>
+	<feature name="Remove emojis"/>
+	<feature name="Data Filtering"/>
+	<feature name="Filter according boolean value"/>
+	<feature name="Data type"/>
+	<feature name="Tweet"/>
+	<feature name="Another custom"/>
+	<feature name="Array coding"/>
+	<feature name="As in Python"/>
+	<feature name="As tuple"/>
+	<feature name="Convert to base shape"/>
+	<feature name="Stemming"/>
+	<feature name="Lemmatization"/>
+	<feature name="Transformation"/>
+	<feature name="Into graph"/>
+	<feature name="For map-reduce"/>
+</configuration>

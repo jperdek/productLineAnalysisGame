@@ -1,0 +1,32 @@
+{
+    "emojiCleaner": {
+        "type": "boolean",
+        "numberCases": 2
+    },
+    "lowerCasting": {
+        "type": "boolean",
+        "numberCases": 2
+    },
+    "punctuationCleaner": {
+        "type": "boolean",
+        "numberCases": 2
+    },
+    "standardQuotes": {
+        "type": "boolean",
+        "numberCases": 2
+    },
+	"dataFiltering": {
+        "type": "boolean",
+        "numberCases": 2
+    },
+	"dataConversion": {
+        "type": "String",
+        "numberCases": 2,
+        "cases": ["python", "tuple"]
+    },
+    "dataEntity": {
+        "type": "String",
+        "numberCases": 1,
+        "cases": ["tweet"]
+    }
+}

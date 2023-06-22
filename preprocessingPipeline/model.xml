@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendposition" value="1431,36"/>
+		<graphics key="legendautolayout" value="false"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="PreprocessingPipeline">
+			<feature mandatory="true" name="Data loading"/>
+			<or name="Data Cleaning">
+				<feature name="Convert to lowecase"/>
+				<feature name="Remove punctuation"/>
+				<feature name="Remove emojis"/>
+			</or>
+			<and name="Data Filtering">
+				<feature name="Filter according boolean value"/>
+			</and>
+			<alt abstract="true" mandatory="true" name="Data type">
+				<feature name="Tweet"/>
+				<feature name="Another custom"/>
+			</alt>
+			<and abstract="true" mandatory="true" name="Array coding">
+				<graphics key="collapsed" value="false"/>
+				<feature name="As in Python"/>
+				<feature name="As tuple"/>
+			</and>
+			<alt abstract="true" name="Convert to base shape">
+				<feature name="Stemming"/>
+				<feature name="Lemmatization"/>
+			</alt>
+			<alt name="Transformation">
+				<feature name="Into graph"/>
+				<feature name="For map-reduce"/>
+			</alt>
+		</and>
+	</struct>
+</featureModel>
